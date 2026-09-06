@@ -1146,11 +1146,98 @@ body.home .capabilities {
 }
 
 .service-detail .container {
+  max-width: 1180px;
+}
+
+@media (min-width: 1024px) {
+  .service-detail .container {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+}
+
+.service-detail-toc {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .service-detail-toc {
+    display: block;
+    position: sticky;
+    top: 110px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+  }
+}
+
+.service-detail-toc-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.service-detail-toc a {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #3a4d5c;
+  padding: 0.5rem 0 0.5rem 0.85rem;
+  border-left: 2px solid var(--hero-border-dark);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.service-detail-toc a:hover {
+  color: var(--gold-hover);
+  border-left-color: var(--gold);
+}
+
+.service-detail-body {
+  min-width: 0;
   max-width: 900px;
+  counter-reset: sdsec;
 }
 
 .service-detail-section {
-  margin-bottom: 3.5rem;
+  position: relative;
+  scroll-margin-top: 100px;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--hero-border-dark);
+  counter-increment: sdsec;
+}
+
+.service-detail-section:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.service-detail-section:nth-of-type(even) {
+  border-top: none;
+  margin-top: 2.5rem;
+  background: #efeae0;
+  border-radius: 12px;
+  padding: 2.25rem 2rem;
+}
+
+.service-detail-section:nth-of-type(even):first-child {
+  margin-top: 0;
+}
+
+.service-detail-section > h2::before {
+  content: counter(sdsec, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
 }
 
 .service-detail-section h2 {
@@ -1165,8 +1252,8 @@ body.home .capabilities {
 .service-detail-section > p {
   font-size: 0.9875rem;
   line-height: 1.75;
-  color: var(--hero-text-dark);
-  opacity: 0.78;
+  color: #3a4d5c;
+  font-weight: 450;
   margin-bottom: 1rem;
   max-width: 720px;
 }
@@ -1176,6 +1263,10 @@ body.home .capabilities {
   grid-template-columns: 1fr 1fr;
   gap: 1.4rem 2.5rem;
   margin-top: 1.75rem;
+  padding: 1.5rem 1.75rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--hero-border-dark);
+  border-radius: 10px;
 }
 
 .service-detail-item {
@@ -1196,8 +1287,7 @@ body.home .capabilities {
 .service-detail-item p {
   font-size: 0.9375rem;
   line-height: 1.6;
-  color: var(--hero-text-dark);
-  opacity: 0.78;
+  color: #3a4d5c;
   margin: 0;
 }
 
@@ -1233,8 +1323,7 @@ body.home .capabilities {
 .service-process-body p {
   font-size: 0.9rem;
   line-height: 1.65;
-  color: var(--hero-text-dark);
-  opacity: 0.75;
+  color: #3a4d5c;
   margin: 0;
   max-width: 600px;
 }
@@ -1244,6 +1333,10 @@ body.home .capabilities {
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem 2.5rem;
   margin-top: 1.75rem;
+  padding: 1.5rem 1.75rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--hero-border-dark);
+  border-radius: 10px;
 }
 
 .service-detail-fact dt {
@@ -1258,8 +1351,7 @@ body.home .capabilities {
 .service-detail-fact dd {
   font-size: 0.9375rem;
   line-height: 1.6;
-  color: var(--hero-text-dark);
-  opacity: 0.8;
+  color: #3a4d5c;
 }
 
 .service-detail-cta {
@@ -1291,13 +1383,16 @@ body.home .capabilities {
   gap: 0.7rem 2.5rem;
   margin-top: 1.5rem;
   list-style: none;
+  padding: 1.5rem 1.75rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--hero-border-dark);
+  border-radius: 10px;
 }
 
 .service-checklist li {
   font-size: 0.9rem;
   line-height: 1.55;
-  color: var(--hero-text-dark);
-  opacity: 0.8;
+  color: #3a4d5c;
   padding-left: 1.1rem;
   position: relative;
 }
@@ -1361,7 +1456,6 @@ body.home .capabilities {
   font-size: 1.05rem;
   line-height: 1.65;
   color: var(--hero-text-dark);
-  opacity: 0.85;
   max-width: 680px;
 }
 
@@ -1385,8 +1479,7 @@ body.home .capabilities {
 .service-faq-item p {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: var(--hero-text-dark);
-  opacity: 0.75;
+  color: #3a4d5c;
   margin: 0;
 }
 
@@ -1443,8 +1536,7 @@ body.home .capabilities {
 .service-scenario p {
   font-size: 0.9375rem;
   line-height: 1.75;
-  color: var(--hero-text-dark);
-  opacity: 0.78;
+  color: #3a4d5c;
   margin-bottom: 1rem;
   max-width: 720px;
 }
@@ -1481,8 +1573,7 @@ body.home .capabilities {
 .service-metric p {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: var(--hero-text-dark);
-  opacity: 0.78;
+  color: #3a4d5c;
   margin-bottom: 0.85rem;
   max-width: 680px;
 }
@@ -1490,6 +1581,10 @@ body.home .capabilities {
 .service-table-wrap {
   overflow-x: auto;
   margin-top: 1.75rem;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--hero-border-dark);
+  border-radius: 10px;
 }
 
 .service-table {
@@ -1517,8 +1612,7 @@ body.home .capabilities {
 }
 
 .service-table td {
-  color: var(--hero-text-dark);
-  opacity: 0.85;
+  color: #3a4d5c;
 }
 
 .service-table-note {
@@ -1584,8 +1678,7 @@ body.home .capabilities {
 .service-waterfall li {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: var(--hero-text-dark);
-  opacity: 0.8;
+  color: #3a4d5c;
   margin-bottom: 0.4rem;
 }
 
