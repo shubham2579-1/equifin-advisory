@@ -414,6 +414,9 @@ a {
   padding: 3.5rem 0 4rem;
   border-bottom: 1px solid var(--hero-border-dark);
   background-color: var(--hero-ivory);
+}
+
+body.home .hero {
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
   background-repeat: repeat;
 }
@@ -1943,11 +1946,6 @@ body.home .sectors {
 .site-footer {
   background-color: var(--bg-dark);
   border-top: 2px solid var(--gold);
-}
-
-body.home .site-footer {
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
-  background-repeat: repeat;
 }
 
 .footer-main {
