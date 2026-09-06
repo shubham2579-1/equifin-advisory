@@ -474,7 +474,7 @@ a {
 }
 
 .matrix-tag {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--gold);
@@ -850,7 +850,7 @@ a {
 }
 
 .tx-tags {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -984,7 +984,7 @@ a {
 }
 
 .cap-keywords {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1003,7 +1003,8 @@ a {
   text-transform: uppercase;
   color: var(--hero-text-dark);
   opacity: 0.55;
-  margin-bottom: 2.5rem;
+  min-height: 44px;
+  margin-bottom: 1.75rem;
   transition: opacity 0.2s ease, color 0.2s ease;
 }
 
@@ -1468,7 +1469,10 @@ a {
 }
 
 .footer-legal-links a {
+  display: inline-block;
   color: var(--text-faint);
+  padding: 12px 0;
+  margin: -12px 0;
   transition: color 0.2s ease;
 }
 
@@ -1913,6 +1917,12 @@ a {
     width: 100%;
   }
 
+  .main-nav .nav-item > a,
+  .main-nav .nav-item > button {
+    min-height: 44px;
+    width: 100%;
+  }
+
   .nav-mega-panel {
     position: static;
     left: auto;
@@ -1975,7 +1985,7 @@ a {
   .approach-headline { font-size: 1.28rem; letter-spacing: -0.005em; }
 
   .marquee-block { padding: 3rem 0 2rem; }
-  .marquee-label { font-size: 11px; margin-bottom: 1.875rem; padding: 0 1.25rem; }
+  .marquee-label { font-size: 12px; margin-bottom: 1.875rem; padding: 0 1.25rem; }
   .marquee-track span { font-size: 13px; padding-right: 40px; }
 
   .hero-actions {
