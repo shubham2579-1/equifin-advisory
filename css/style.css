@@ -106,6 +106,8 @@ html {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -137,10 +139,19 @@ a {
   margin-bottom: 1.25rem;
 }
 
+/* Ivory/light-background sections need a darker gold for AA contrast;
+   --gold (2.84:1) only passes on the dark navy sections (track-record, why, who-we-work-with). */
+.hero .eyebrow,
+.capabilities .eyebrow,
+.transactions .eyebrow,
+.sectors .eyebrow {
+  color: #7d6339;
+}
+
 .hero-left .eyebrow {
   font-weight: 800;
-  color: var(--gold-hover);
-  text-shadow: 0 0 18px rgba(212, 175, 120, 0.35);
+  color: #7d6339;
+  text-shadow: none;
 }
 
 .section-title {
@@ -1001,8 +1012,8 @@ a {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--hero-text-dark);
-  opacity: 0.55;
+  color: #4a5c6b;
+  opacity: 1;
   min-height: 44px;
   margin-bottom: 1.75rem;
   transition: opacity 0.2s ease, color 0.2s ease;
@@ -1029,8 +1040,8 @@ a {
 .service-breadcrumb a {
   display: inline-flex;
   align-items: center;
-  color: var(--hero-text-dark);
-  opacity: 0.55;
+  color: #4a5c6b;
+  opacity: 1;
   transition: opacity 0.2s ease, color 0.2s ease;
 }
 
@@ -1599,8 +1610,9 @@ a {
 .service-desc {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: var(--hero-text-dark);
-  opacity: 0.72;
+  color: #3a4d5c;
+  opacity: 1;
+  font-weight: 450;
   max-width: 640px;
   margin-bottom: 1.5rem;
 }
@@ -1610,7 +1622,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #7d6339;
   margin-bottom: 2.5rem;
 }
 
