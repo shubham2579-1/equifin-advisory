@@ -1501,6 +1501,33 @@ a {
   margin: 0;
 }
 
+.service-signature-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-dim);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.service-waterfall {
+  margin: 1rem 0 0 1.25rem;
+  padding: 0;
+}
+
+.service-waterfall li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--hero-text-dark);
+  opacity: 0.8;
+  margin-bottom: 0.4rem;
+}
+
 @media (max-width: 768px) {
   .service-detail-list,
   .service-detail-table,
