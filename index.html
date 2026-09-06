@@ -843,7 +843,7 @@
 
             <div class="form-group">
               <label for="cf-phone">Phone <span class="req">*</span></label>
-              <input type="tel" id="cf-phone" name="phone" placeholder="+91 00000 00000" required>
+              <input type="tel" id="cf-phone" name="phone" placeholder="+91 00000 00000" pattern="[0-9+\-\s]{10,15}" title="Enter a valid phone number (at least 10 digits)" required>
             </div>
 
             <div class="form-group">
@@ -1024,10 +1024,17 @@
       e.preventDefault();
       const note = document.getElementById('consultationNote');
       const submitBtn = consultationForm.querySelector('.consultation-submit');
-      submitBtn.disabled = true;
-      note.textContent = "Sending your enquiry...";
 
       const payload = Object.fromEntries(new FormData(consultationForm).entries());
+
+      const phoneDigits = (payload.phone || '').replace(/\D/g, '');
+      if (phoneDigits.length < 10 || phoneDigits.length > 13) {
+        note.textContent = "Please enter a valid phone number (at least 10 digits).";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      note.textContent = "Sending your enquiry...";
 
       fetch(consultationForm.action, {
         method: 'POST',

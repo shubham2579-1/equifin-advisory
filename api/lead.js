@@ -45,6 +45,11 @@ module.exports = async (req, res) => {
     return res.status(400).json({ success: false, error: 'Invalid email address' });
   }
 
+  const phoneDigits = String(body.phone).replace(/\D/g, '');
+  if (phoneDigits.length < 10 || phoneDigits.length > 13) {
+    return res.status(400).json({ success: false, error: 'Invalid phone number' });
+  }
+
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error('RESEND_API_KEY is not configured');
