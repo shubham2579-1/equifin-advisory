@@ -1013,6 +1013,42 @@ a {
   color: var(--gold);
 }
 
+.service-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  min-height: 44px;
+  margin-bottom: 1.75rem;
+}
+
+.service-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--hero-text-dark);
+  opacity: 0.55;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.service-breadcrumb a:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.service-breadcrumb-sep {
+  color: var(--hero-text-dark);
+  opacity: 0.3;
+}
+
+.service-breadcrumb [aria-current="page"] {
+  color: var(--hero-text-dark);
+  opacity: 0.85;
+}
+
 /* LEGAL CONTENT PAGES */
 .legal-content {
   padding: 0 0 90px;

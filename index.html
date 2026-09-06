@@ -1081,6 +1081,15 @@
     }
   });
 
+  const cfServiceSelect = document.getElementById('cf-service');
+  if (cfServiceSelect) {
+    const requestedService = new URLSearchParams(window.location.search).get('service');
+    if (requestedService) {
+      const hasMatch = Array.from(cfServiceSelect.options).some((opt) => opt.value === requestedService);
+      if (hasMatch) cfServiceSelect.value = requestedService;
+    }
+  }
+
   const consultationForm = document.getElementById('consultationForm');
   if (consultationForm) {
     consultationForm.addEventListener('submit', (e) => {

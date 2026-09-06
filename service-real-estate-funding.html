@@ -84,6 +84,38 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://equifinadvisory.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://equifinadvisory.com/services.html" },
+      { "@type": "ListItem", "position": 3, "name": "Real Estate Funding", "item": "https://equifinadvisory.com/service-real-estate-funding.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Real Estate Funding Advisory",
+    "name": "Real Estate Funding Advisory",
+    "description": "Structured real estate funding for land acquisition, approvals, premiums, TDR, construction and refinancing. Capital aligned with the development lifecycle.",
+    "provider": {
+      "@type": "FinancialService",
+      "name": "EquiFin Advisory",
+      "url": "https://equifinadvisory.com/"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "url": "https://equifinadvisory.com/service-real-estate-funding.html"
+  }
+  </script>
 </head>
 <body>
 
@@ -346,11 +378,11 @@
       </ul>
 
       <div class="nav-cta-mobile">
-        <a href="index.html#contact" class="btn-primary">Discuss Your Requirement</a>
+        <a href="index.html?service=Real%20Estate%20Funding#contact" class="btn-primary">Discuss Your Requirement</a>
       </div>
     </nav>
 
-    <a href="index.html#contact" class="btn-primary header-cta">Discuss Your Requirement</a>
+    <a href="index.html?service=Real%20Estate%20Funding#contact" class="btn-primary header-cta">Discuss Your Requirement</a>
 
     <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
       <span></span>
@@ -361,7 +393,13 @@
 <main>
   <section class="hero" id="service-hero">
     <div class="container">
-      <a href="services.html" class="service-back">&larr; All Services</a>
+      <nav class="service-breadcrumb" aria-label="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="service-breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="services.html">Services</a>
+        <span class="service-breadcrumb-sep" aria-hidden="true">/</span>
+        <span aria-current="page">Real Estate Funding</span>
+      </nav>
       <span class="eyebrow">Real Estate Funding</span>
       <h1 class="service-hero-title">Capital for Every Stage of Real Estate Development.</h1>
       <p class="service-desc">Real estate capital requirements begin long before construction starts. Land acquisition, development rights, regulatory approvals, premium obligations and TDR can require significant capital before a project begins generating customer collections.</p>
@@ -369,7 +407,7 @@
       <p class="service-keywords">Construction Finance &nbsp;·&nbsp; Inventory Funding &nbsp;·&nbsp; Land &amp; Approvals Finance</p>
 
       <div class="hero-actions">
-        <a href="index.html#contact" class="btn-primary">Discuss a Real Estate Funding Requirement</a>
+        <a href="index.html?service=Real%20Estate%20Funding#contact" class="btn-primary">Discuss a Real Estate Funding Requirement</a>
         <a href="services.html" class="btn-secondary">View All Services</a>
       </div>
     </div>
@@ -916,7 +954,7 @@
       <div class="service-detail-cta">
         <h3>The Right Time to Plan Real Estate Capital Is Before Construction Begins.</h3>
         <p>Land acquisition, development rights, approvals, premiums and TDR can create significant capital requirements before a project generates meaningful cash flows. A well-structured capital plan should consider how each financing decision affects the next stage of development.</p>
-        <a href="index.html#contact" class="btn-primary">Discuss a Real Estate Funding Requirement</a>
+        <a href="index.html?service=Real%20Estate%20Funding#contact" class="btn-primary">Discuss a Real Estate Funding Requirement</a>
       </div>
 
     </div>
@@ -1040,6 +1078,11 @@
         item.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', 'false');
       }
     });
+    if (nav.classList.contains('is-open') && !nav.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-active');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   });
 
   document.addEventListener("keydown", (e) => {

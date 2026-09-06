@@ -79,6 +79,38 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://equifinadvisory.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://equifinadvisory.com/services.html" },
+      { "@type": "ListItem", "position": 3, "name": "Corporate Finance", "item": "https://equifinadvisory.com/service-corporate-finance.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Corporate Finance Advisory",
+    "name": "Corporate Finance Advisory",
+    "description": "Corporate finance and debt advisory for growth, acquisitions, refinancing and complex capital requirements. Structure capital around business cash flows and transaction realities.",
+    "provider": {
+      "@type": "FinancialService",
+      "name": "EquiFin Advisory",
+      "url": "https://equifinadvisory.com/"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "url": "https://equifinadvisory.com/service-corporate-finance.html"
+  }
+  </script>
 </head>
 <body>
 
@@ -341,11 +373,11 @@
       </ul>
 
       <div class="nav-cta-mobile">
-        <a href="index.html#contact" class="btn-primary">Discuss Your Requirement</a>
+        <a href="index.html?service=Corporate%20Finance#contact" class="btn-primary">Discuss Your Requirement</a>
       </div>
     </nav>
 
-    <a href="index.html#contact" class="btn-primary header-cta">Discuss Your Requirement</a>
+    <a href="index.html?service=Corporate%20Finance#contact" class="btn-primary header-cta">Discuss Your Requirement</a>
 
     <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
       <span></span>
@@ -356,7 +388,13 @@
 <main>
   <section class="hero" id="service-hero">
     <div class="container">
-      <a href="services.html" class="service-back">&larr; All Services</a>
+      <nav class="service-breadcrumb" aria-label="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="service-breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="services.html">Services</a>
+        <span class="service-breadcrumb-sep" aria-hidden="true">/</span>
+        <span aria-current="page">Corporate Finance</span>
+      </nav>
       <span class="eyebrow">Corporate Finance</span>
       <h1 class="service-hero-title">Capital Structures Should Support Growth. Not Constrain It.</h1>
       <p class="service-desc">As businesses grow, financing decisions become more complex than simply raising additional debt. Expansion capital, acquisitions, refinancing and balance-sheet optimisation require a structure that considers leverage, repayment capacity, security, cost of capital and the long-term flexibility of the business.</p>
@@ -364,7 +402,7 @@
       <p class="service-keywords">Acquisition Finance &nbsp;·&nbsp; Structured Debt &nbsp;·&nbsp; Refinancing</p>
 
       <div class="hero-actions">
-        <a href="index.html#contact" class="btn-primary">Discuss Your Capital Structure</a>
+        <a href="index.html?service=Corporate%20Finance#contact" class="btn-primary">Discuss Your Capital Structure</a>
         <a href="services.html" class="btn-secondary">View All Services</a>
       </div>
     </div>
@@ -809,7 +847,7 @@
       <div class="service-detail-cta">
         <h3>A Capital Requirement Is Only the Starting Point.</h3>
         <p>The more important question is whether the proposed structure works for the business, the transaction and the capital provider evaluating it. Discuss your capital requirement with EquiFin.</p>
-        <a href="index.html#contact" class="btn-primary">Discuss Your Capital Structure</a>
+        <a href="index.html?service=Corporate%20Finance#contact" class="btn-primary">Discuss Your Capital Structure</a>
       </div>
 
     </div>
@@ -933,6 +971,11 @@
         item.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', 'false');
       }
     });
+    if (nav.classList.contains('is-open') && !nav.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-active');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   });
 
   document.addEventListener("keydown", (e) => {

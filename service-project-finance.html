@@ -79,6 +79,38 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://equifinadvisory.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://equifinadvisory.com/services.html" },
+      { "@type": "ListItem", "position": 3, "name": "Project Finance", "item": "https://equifinadvisory.com/service-project-finance.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Project Finance Advisory",
+    "name": "Project Finance Advisory",
+    "description": "Project finance advisory for greenfield, brownfield and capital-intensive projects. Structure long-term debt around project economics, construction risk and cash flows.",
+    "provider": {
+      "@type": "FinancialService",
+      "name": "EquiFin Advisory",
+      "url": "https://equifinadvisory.com/"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "url": "https://equifinadvisory.com/service-project-finance.html"
+  }
+  </script>
 </head>
 <body>
 
@@ -341,11 +373,11 @@
       </ul>
 
       <div class="nav-cta-mobile">
-        <a href="index.html#contact" class="btn-primary">Discuss Your Requirement</a>
+        <a href="index.html?service=Project%20Finance#contact" class="btn-primary">Discuss Your Requirement</a>
       </div>
     </nav>
 
-    <a href="index.html#contact" class="btn-primary header-cta">Discuss Your Requirement</a>
+    <a href="index.html?service=Project%20Finance#contact" class="btn-primary header-cta">Discuss Your Requirement</a>
 
     <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
       <span></span>
@@ -356,7 +388,13 @@
 <main>
   <section class="hero" id="service-hero">
     <div class="container">
-      <a href="services.html" class="service-back">&larr; All Services</a>
+      <nav class="service-breadcrumb" aria-label="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="service-breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="services.html">Services</a>
+        <span class="service-breadcrumb-sep" aria-hidden="true">/</span>
+        <span aria-current="page">Project Finance</span>
+      </nav>
       <span class="eyebrow">Project Finance</span>
       <h1 class="service-hero-title">Long-Term Project Capital Starts With Bankable Cash Flows.</h1>
       <p class="service-desc">A project's ability to raise debt depends on more than its total project cost or the value of underlying assets. Lenders evaluate how the project will be built, when it will begin operating and whether future cash flows can reliably service long-term debt.</p>
@@ -364,7 +402,7 @@
       <p class="service-keywords">Greenfield &amp; Brownfield &nbsp;·&nbsp; TEV Coordination &nbsp;·&nbsp; Long-Term Tenures</p>
 
       <div class="hero-actions">
-        <a href="index.html#contact" class="btn-primary">Review Your Project Funding Requirement</a>
+        <a href="index.html?service=Project%20Finance#contact" class="btn-primary">Review Your Project Funding Requirement</a>
         <a href="services.html" class="btn-secondary">View All Services</a>
       </div>
     </div>
@@ -878,7 +916,7 @@
       <div class="service-detail-cta">
         <h3>A Project Requirement Is Not Yet a Financing Structure.</h3>
         <p>Before approaching lenders, the project needs a credible view of its cost, capital requirement, construction timeline, operating assumptions and debt-servicing capacity. Review your project funding requirement with EquiFin.</p>
-        <a href="index.html#contact" class="btn-primary">Review Your Project Funding Requirement</a>
+        <a href="index.html?service=Project%20Finance#contact" class="btn-primary">Review Your Project Funding Requirement</a>
       </div>
 
     </div>
@@ -1002,6 +1040,11 @@
         item.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', 'false');
       }
     });
+    if (nav.classList.contains('is-open') && !nav.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-active');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   });
 
   document.addEventListener("keydown", (e) => {

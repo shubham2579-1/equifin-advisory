@@ -618,6 +618,11 @@
         item.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', 'false');
       }
     });
+    if (nav.classList.contains('is-open') && !nav.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-active');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   });
 
   document.addEventListener("keydown", (e) => {
