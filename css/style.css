@@ -472,6 +472,8 @@ a {
 /* Matrix card replacing generic why-us */
 .deal-matrix-box {
   background-color: var(--bg-dark);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   border: 1px solid var(--border-gold);
   padding: 2.25rem;
   border-radius: 3px;
@@ -729,6 +731,8 @@ a {
 .track-record {
   padding: 70px 0;
   background-color: var(--bg-dark);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -794,6 +798,8 @@ a {
 .transactions {
   padding: 3.5rem 0 70px;
   background-color: var(--hero-ivory);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   border-bottom: 1px solid var(--hero-border-dark);
 }
 
@@ -890,6 +896,11 @@ a {
   padding: 3.5rem 0 70px;
   border-bottom: 1px solid var(--hero-border-dark);
   background-color: var(--hero-ivory);
+}
+
+body.home .capabilities {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 .capabilities .section-title {
@@ -1633,6 +1644,11 @@ a {
   border-bottom: 1px solid var(--hero-border-dark);
 }
 
+body.home .sectors {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
 .sectors .section-title {
   color: var(--hero-text-dark);
 }
@@ -1738,6 +1754,8 @@ a {
 .who-we-work-with {
   padding: 70px 0;
   background-color: var(--bg-dark);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -1814,6 +1832,8 @@ a {
   padding: 3.5rem 0 70px;
   border-bottom: 1px solid var(--border-subtle);
   background-color: var(--bg-dark);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 .why-split {
@@ -1923,6 +1943,11 @@ a {
 .site-footer {
   background-color: var(--bg-dark);
   border-top: 2px solid var(--gold);
+}
+
+body.home .site-footer {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 .footer-main {
@@ -2074,6 +2099,8 @@ a {
 .consultation {
   padding: 45px 0;
   background-color: var(--hero-ivory);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   border-bottom: 1px solid var(--hero-border-dark);
 }
 
@@ -2086,6 +2113,8 @@ a {
 
 .consultation-panel {
   background-color: var(--bg-dark);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   border-radius: 20px;
   padding: 3.25rem 2.75rem;
   display: flex;
