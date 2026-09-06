@@ -2827,7 +2827,7 @@ a.contact-strip-value:hover {
 
 /* Main contact section */
 .contact-main {
-  padding: 90px 0;
+  padding: 70px 0;
   background-color: var(--hero-ivory);
 }
 
@@ -2837,7 +2837,7 @@ a.contact-strip-value:hover {
 
 .contact-main-head {
   max-width: 680px;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .contact-main-head .section-title {
@@ -2947,7 +2947,7 @@ a.contact-strip-value:hover {
 
 /* What happens next — dark process section */
 .contact-process {
-  padding: 90px 0;
+  padding: 70px 0;
   background-color: var(--bg-dark);
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
   background-repeat: repeat;
@@ -2955,7 +2955,7 @@ a.contact-strip-value:hover {
 
 .contact-process-head {
   max-width: 680px;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .contact-process-head .section-title {
@@ -3012,20 +3012,20 @@ a.contact-strip-value:hover {
   line-height: 1.75;
   color: var(--text-muted);
   max-width: 760px;
-  margin-top: 3.5rem;
-  padding-top: 2.25rem;
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
   border-top: 1px solid var(--border-subtle);
 }
 
 /* Direct contact options */
 .contact-direct {
-  padding: 90px 0;
+  padding: 70px 0;
   background-color: var(--hero-ivory);
 }
 
 .contact-direct .section-title {
   color: var(--hero-text-dark);
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .contact-options-grid {
@@ -3089,14 +3089,14 @@ a.contact-strip-value:hover {
 
 /* Office section */
 .contact-office {
-  padding: 90px 0;
+  padding: 70px 0;
   background-color: var(--hero-ivory);
   border-top: 1px solid var(--hero-border-dark);
 }
 
 .contact-office .section-title {
   color: var(--hero-text-dark);
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .contact-office-card {
@@ -3157,7 +3157,7 @@ a.contact-strip-value:hover {
 
 /* Trust & disclosure */
 .contact-trust {
-  padding: 90px 0;
+  padding: 70px 0;
   background-color: var(--bg-dark);
 }
 
@@ -3194,7 +3194,7 @@ a.contact-strip-value:hover {
 
 /* FAQ section */
 .contact-faq {
-  padding: 90px 0;
+  padding: 70px 0;
   background-color: var(--hero-ivory);
 }
 
@@ -3209,7 +3209,7 @@ a.contact-strip-value:hover {
 
 /* Final CTA */
 .contact-final-cta {
-  padding: 0 0 90px;
+  padding: 0 0 70px;
   background-color: var(--hero-ivory);
 }
 
