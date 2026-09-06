@@ -1224,9 +1224,137 @@ a {
   max-width: 460px;
 }
 
+.service-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem 2.5rem;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+
+.service-checklist li {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--hero-text-dark);
+  opacity: 0.8;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.service-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.service-checklist-group {
+  margin-bottom: 1.75rem;
+}
+
+.service-checklist-group:last-child {
+  margin-bottom: 0;
+}
+
+.service-checklist-group h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.service-audience-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.service-audience-tag {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--hero-text-dark);
+  background: rgba(7, 28, 44, 0.05);
+  border: 1px solid var(--hero-border-dark);
+  border-radius: 20px;
+  padding: 0.55rem 1.15rem;
+}
+
+.service-perspective {
+  border-left: 3px solid var(--gold);
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.service-perspective p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--hero-text-dark);
+  opacity: 0.85;
+  max-width: 680px;
+}
+
+.service-faq-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--hero-border-dark);
+}
+
+.service-faq-item:first-child {
+  padding-top: 0;
+}
+
+.service-faq-item h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9875rem;
+  color: var(--hero-text-dark);
+  margin-bottom: 0.6rem;
+}
+
+.service-faq-item p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--hero-text-dark);
+  opacity: 0.75;
+  margin: 0;
+}
+
+.service-related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.service-related-link {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--hero-text-dark);
+  border: 1px solid var(--border-gold);
+  border-radius: 4px;
+  padding: 0.65rem 1.1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.service-related-link:hover {
+  background: var(--gold);
+  color: var(--bg-dark);
+}
+
 @media (max-width: 768px) {
   .service-detail-list,
-  .service-detail-table {
+  .service-detail-table,
+  .service-checklist {
     grid-template-columns: 1fr;
   }
 
