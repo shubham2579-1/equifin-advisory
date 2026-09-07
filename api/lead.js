@@ -12,6 +12,34 @@
 const REQUIRED_FIELDS = ['name', 'company', 'email', 'phone', 'service'];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const MAX_LENGTHS = {
+  name: 100,
+  company: 100,
+  email: 254,
+  phone: 20,
+  service: 100,
+  ticket_size: 50,
+  message: 2000,
+};
+
+// Best-effort in-memory rate limit. Resets whenever the serverless instance
+// cold-starts and isn't shared across concurrent instances, but it throttles
+// scripted bursts hitting a single warm instance without needing an external
+// store. For stronger protection under real abuse, move this to Vercel
+// KV / Upstash so the counter is shared across instances.
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX = 5;
+const requestLog = new Map();
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const timestamps = (requestLog.get(ip) || []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+  timestamps.push(now);
+  requestLog.set(ip, timestamps);
+  if (requestLog.size > 5000) requestLog.clear(); // guard against unbounded memory growth
+  return timestamps.length > RATE_LIMIT_MAX;
+}
+
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -22,6 +50,9 @@ function escapeHtml(value) {
 }
 
 module.exports = async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://equifinadvisory.com');
+  res.setHeader('Vary', 'Origin');
+
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ success: false, error: 'Method not allowed' });
@@ -29,15 +60,36 @@ module.exports = async (req, res) => {
 
   const body = req.body || {};
 
+  const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || req.socket?.remoteAddress || 'unknown';
+  if (isRateLimited(ip)) {
+    return res.status(429).json({ success: false, error: 'Too many requests. Please try again later.' });
+  }
+
   // Honeypot — bots fill hidden fields humans never see. Report success
   // without sending an email or revealing that the field was checked.
   if (body._honey) {
     return res.status(200).json({ success: true });
   }
 
+  // Time trap — a hidden timestamp set when the form rendered. Real visitors
+  // take at least a couple of seconds to fill the form; scripted submissions
+  // usually don't. Fail silently, same as the honeypot, so bots aren't tipped off.
+  if (body._ts) {
+    const elapsed = Date.now() - Number(body._ts);
+    if (Number.isFinite(elapsed) && elapsed >= 0 && elapsed < 1500) {
+      return res.status(200).json({ success: true });
+    }
+  }
+
   for (const field of REQUIRED_FIELDS) {
     if (!body[field] || !String(body[field]).trim()) {
       return res.status(400).json({ success: false, error: `Missing field: ${field}` });
+    }
+  }
+
+  for (const [field, max] of Object.entries(MAX_LENGTHS)) {
+    if (body[field] && String(body[field]).length > max) {
+      return res.status(400).json({ success: false, error: `${field} is too long (max ${max} characters)` });
     }
   }
 

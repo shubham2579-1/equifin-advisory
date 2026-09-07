@@ -7,7 +7,15 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-WNQ3KVKDH0');
+    gtag('consent', 'default', { analytics_storage: 'denied' });
+    (function () {
+      var consent = null;
+      try { consent = localStorage.getItem('equifin_cookie_consent'); } catch (e) {}
+      if (consent === 'accepted') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+        gtag('config', 'G-WNQ3KVKDH0');
+      }
+    })();
   </script>
 
   <meta charset="UTF-8">
@@ -37,8 +45,8 @@
   <meta name="twitter:image" content="https://equifinadvisory.com/images/og-preview.png">
   <link rel="preload" href="fonts/plus-jakarta-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="images/equifin%20favicon.svg">
-  <link rel="apple-touch-icon" href="images/equifin%20favicon.png">
+  <link rel="icon" type="image/svg+xml" href="images/equifin-favicon.svg">
+  <link rel="apple-touch-icon" href="images/equifin-favicon.png">
 
   <script type="application/ld+json">
   {
@@ -122,11 +130,42 @@
   </script>
 </head>
 <body>
+  <div class="cookie-consent-banner" id="cookieConsent" role="dialog" aria-live="polite" aria-label="Cookie preferences" hidden>
+    <div class="cookie-consent-inner">
+      <p>We use Google Analytics to understand how visitors use this site. No data is used for advertising, and declining won't limit anything you can do here. See our <a href="privacy-policy.html" style="color: var(--text-main); text-decoration: underline;">Privacy Policy</a> for details.</p>
+      <div class="cookie-consent-actions">
+        <button type="button" id="cookieDecline" class="btn-secondary">Decline</button>
+        <button type="button" id="cookieAccept" class="btn-primary">Accept</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var KEY = 'equifin_cookie_consent';
+      var banner = document.getElementById('cookieConsent');
+      var stored = null;
+      try { stored = localStorage.getItem(KEY); } catch (e) {}
+      if (!stored) banner.hidden = false;
+      document.getElementById('cookieAccept').addEventListener('click', function () {
+        try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
+        banner.hidden = true;
+        if (window.gtag) {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+          gtag('config', 'G-WNQ3KVKDH0');
+        }
+      });
+      document.getElementById('cookieDecline').addEventListener('click', function () {
+        try { localStorage.setItem(KEY, 'declined'); } catch (e) {}
+        banner.hidden = true;
+      });
+    })();
+  </script>
+
 
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo" aria-label="EquiFin Advisory — Home">
-      <img src="images/equifin%20logo.svg?v=2" alt="EquiFin Advisory" width="147" height="44">
+      <img src="images/equifin-logo.svg?v=2" alt="EquiFin Advisory" width="147" height="44">
     </a>
 
     <nav class="main-nav" id="mainNav">
@@ -1089,13 +1128,13 @@
   <div class="container footer-main">
     <div class="footer-brand">
       <a href="index.html" class="footer-logo" aria-label="EquiFin Advisory — Home">
-        <img src="images/equifin%20logo%20reversed.svg?v=2" alt="EquiFin Advisory" width="147" height="44">
+        <img src="images/equifin-logo-reversed.svg?v=2" alt="EquiFin Advisory" width="147" height="44">
       </a>
       <p class="footer-tagline">Institutional debt and capital advisory for growth-stage and established businesses — structured around lender realities and transaction complexity.</p>
     </div>
 
     <div class="footer-col">
-      <h4 class="footer-col-title"><a href="services.html">Services</a></h4>
+      <h2 class="footer-col-title"><a href="services.html">Services</a></h2>
       <ul class="footer-links">
         <li><a href="service-corporate-finance.html">Corporate Finance</a></li>
         <li><a href="service-project-finance.html">Project Finance</a></li>
@@ -1109,7 +1148,7 @@
     </div>
 
     <div class="footer-col">
-      <h4 class="footer-col-title"><a href="sectors.html">Sectors</a></h4>
+      <h2 class="footer-col-title"><a href="sectors.html">Sectors</a></h2>
       <ul class="footer-links">
         <li><a href="sector-real-estate.html">Real Estate</a></li>
         <li><a href="sector-infrastructure.html">Infrastructure</a></li>
@@ -1125,7 +1164,7 @@
     </div>
 
     <div class="footer-col">
-      <h4 class="footer-col-title">Company</h4>
+      <h2 class="footer-col-title">Company</h2>
       <ul class="footer-links">
         <li><a href="about-us.html">About Us</a></li>
         <li><a href="team.html">Team</a></li>
@@ -1136,7 +1175,7 @@
     </div>
 
     <div class="footer-col">
-      <h4 class="footer-col-title">Get in Touch</h4>
+      <h2 class="footer-col-title">Get in Touch</h2>
 
       <div class="footer-contact-block">
         <div class="footer-contact-city">

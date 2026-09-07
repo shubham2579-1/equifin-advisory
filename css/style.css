@@ -205,6 +205,71 @@ a {
   color: #ffffff;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* COOKIE CONSENT BANNER */
+.cookie-consent-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background-color: var(--bg-dark);
+  border-top: 1px solid rgba(247, 245, 240, 0.14);
+  padding: 1.1rem 1.5rem;
+}
+
+.cookie-consent-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+}
+
+.cookie-consent-banner p {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 640px;
+}
+
+.cookie-consent-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.cookie-consent-banner .btn-primary,
+.cookie-consent-banner .btn-secondary {
+  padding: 0.65rem 1.4rem;
+  font-size: 0.8125rem;
+}
+
+@media (max-width: 640px) {
+  .cookie-consent-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie-consent-actions {
+    justify-content: flex-end;
+  }
+}
+
 /* HEADER */
 .site-header {
   position: sticky;
@@ -496,7 +561,7 @@ body.home .hero {
   margin-bottom: 0.25rem;
 }
 
-.deal-matrix-head h3 {
+.deal-matrix-head .deal-matrix-title {
   font-family: var(--font-serif);
   font-size: 1.25rem;
   color: #ffffff;
@@ -2584,6 +2649,12 @@ body.home .sectors {
 
   .main-nav.is-open {
     display: block;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  body:has(.main-nav.is-open) {
+    overflow: hidden;
   }
 
   .main-nav .nav-list {
