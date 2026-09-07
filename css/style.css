@@ -4764,3 +4764,58 @@ button.topic-card {
     padding: 0.7rem 0.85rem;
   }
 }
+
+/* ===== SITEMAP PAGE ===== */
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+.sitemap-group h2 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--hero-text-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-gold);
+}
+
+.sitemap-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sitemap-links li {
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--hero-border-dark);
+}
+
+.sitemap-links li:first-child {
+  border-top: none;
+}
+
+.sitemap-links a {
+  font-size: 0.9rem;
+  color: #3a4d5c;
+  transition: color 0.2s ease;
+}
+
+.sitemap-links a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 1024px) {
+  .sitemap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
