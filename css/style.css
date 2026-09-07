@@ -3831,3 +3831,210 @@ a.contact-strip-value:hover {
     gap: 2rem;
   }
 }
+
+/* ============================================
+   TEAM PAGE
+   ============================================ */
+
+/* Leadership profile — editorial two-column layout */
+.leadership-profile {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding: 3rem 0;
+  border-top: 1px solid var(--hero-border-dark);
+}
+
+.leadership-profile:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.leadership-portrait {
+  width: 220px;
+  height: 220px;
+  border-radius: 4px;
+  background-color: var(--bg-dark);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leadership-portrait span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--gold);
+}
+
+.leadership-name {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--hero-text-dark);
+  margin-bottom: 0.35rem;
+}
+
+.leadership-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+
+.leadership-positioning {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--hero-text-dark);
+  margin-bottom: 1.25rem;
+  max-width: 640px;
+}
+
+.leadership-bio p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #3a4d5c;
+  margin-bottom: 1rem;
+  max-width: 640px;
+}
+
+.leadership-focus-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 1.25rem 0 0.85rem;
+  display: block;
+}
+
+/* Areas-of-expertise grid */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.75rem;
+}
+
+/* How our team works — transaction diagram */
+.transaction-diagram {
+  margin: 2.75rem 0;
+  text-align: center;
+}
+
+.diagram-node {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hero-text-dark);
+  background: rgba(7, 28, 44, 0.04);
+  border: 1px solid var(--hero-border-dark);
+  border-radius: 20px;
+  padding: 0.65rem 1.5rem;
+}
+
+.diagram-node.emphasis {
+  background: var(--gold-dim);
+  border-color: var(--border-gold);
+  color: var(--hero-text-dark);
+  font-weight: 700;
+}
+
+.diagram-connector {
+  width: 1px;
+  height: 28px;
+  background: var(--hero-border-dark);
+  margin: 0 auto;
+}
+
+.diagram-branch-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 28px;
+}
+
+.diagram-branch-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 16.5%;
+  right: 16.5%;
+  height: 1px;
+  background: var(--hero-border-dark);
+}
+
+.diagram-branch {
+  position: relative;
+  padding-top: 28px;
+  flex: 1;
+  max-width: 220px;
+}
+
+.diagram-branch::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 28px;
+  background: var(--hero-border-dark);
+}
+
+@media (max-width: 900px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .leadership-profile {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .leadership-portrait {
+    margin: 0 auto;
+  }
+
+  .leadership-positioning,
+  .leadership-bio p {
+    max-width: 100%;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagram-branch-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .diagram-branch-row::before {
+    display: none;
+  }
+
+  .diagram-branch {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .diagram-branch::before {
+    display: none;
+  }
+}
