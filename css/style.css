@@ -368,8 +368,7 @@ a {
 
 .nav-mega-desc {
   font-size: 0.75rem;
-  color: var(--hero-text-dark);
-  opacity: 0.6;
+  color: #5a6c78;
   line-height: 1.4;
 }
 
@@ -441,8 +440,7 @@ body.home .hero {
 .hero-desc {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: var(--hero-text-dark);
-  opacity: 0.78;
+  color: #3a4d5c;
   max-width: 610px;
   margin-bottom: 2.5rem;
 }
@@ -464,8 +462,7 @@ body.home .hero {
 
 .hero-statement {
   font-size: 0.8125rem;
-  color: var(--hero-text-dark);
-  opacity: 0.62;
+  color: #5a6c78;
   white-space: nowrap;
   margin-top: 1.75rem;
   padding-top: 1rem;
@@ -819,8 +816,7 @@ body.home .hero {
 .tx-note {
   font-size: 0.8125rem;
   font-style: italic;
-  color: var(--hero-text-dark);
-  opacity: 0.55;
+  color: #5a6c78;
 }
 
 .tx-grid {
@@ -874,22 +870,19 @@ body.home .hero {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--hero-text-dark);
-  opacity: 0.5;
+  color: #4a5c6b;
   margin-bottom: 0.75rem;
 }
 
 .tx-desc {
   font-size: 0.85rem;
   line-height: 1.6;
-  color: var(--hero-text-dark);
-  opacity: 0.72;
+  color: #3a4d5c;
 }
 
 .tx-disclaimer {
   font-size: 0.75rem;
-  color: var(--hero-text-dark);
-  opacity: 0.45;
+  color: #5a6c78;
   margin-top: 2.5rem;
   max-width: 640px;
 }
@@ -922,8 +915,7 @@ body.home .capabilities {
   max-width: 500px;
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--hero-text-dark);
-  opacity: 0.78;
+  color: #3a4d5c;
 }
 
 .capabilities-table {
@@ -1002,8 +994,7 @@ body.home .capabilities {
 .cap-desc {
   font-size: 0.9375rem;
   line-height: 1.65;
-  color: var(--hero-text-dark);
-  opacity: 0.72;
+  color: #3a4d5c;
   max-width: 480px;
   margin-bottom: 1rem;
 }
@@ -1013,13 +1004,13 @@ body.home .capabilities {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--hero-text-dark);
-  opacity: 0.48;
+  color: #5a6c78;
 }
 
 /* Standalone service page hero */
 .service-back {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   gap: 0.4rem;
   font-size: 0.75rem;
@@ -1027,14 +1018,12 @@ body.home .capabilities {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #4a5c6b;
-  opacity: 1;
   min-height: 44px;
   margin-bottom: 1.75rem;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .service-back:hover {
-  opacity: 1;
   color: var(--gold);
 }
 
@@ -1065,13 +1054,11 @@ body.home .capabilities {
 }
 
 .service-breadcrumb-sep {
-  color: var(--hero-text-dark);
-  opacity: 0.3;
+  color: #5a6c78;
 }
 
 .service-breadcrumb [aria-current="page"] {
   color: var(--hero-text-dark);
-  opacity: 0.85;
 }
 
 /* LEGAL CONTENT PAGES */
@@ -1087,8 +1074,7 @@ body.home .capabilities {
 .legal-updated {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--hero-text-dark);
-  opacity: 0.5;
+  color: #5a6c78;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--hero-border-dark);
@@ -1110,8 +1096,7 @@ body.home .capabilities {
 .legal-section p {
   font-size: 0.9375rem;
   line-height: 1.75;
-  color: var(--hero-text-dark);
-  opacity: 0.78;
+  color: #3a4d5c;
   margin-bottom: 1rem;
 }
 
@@ -1123,8 +1108,7 @@ body.home .capabilities {
 .legal-section li {
   font-size: 0.9375rem;
   line-height: 1.75;
-  color: var(--hero-text-dark);
-  opacity: 0.78;
+  color: #3a4d5c;
   margin-bottom: 0.5rem;
 }
 
@@ -1618,8 +1602,7 @@ body.home .capabilities {
 .service-table-note {
   font-size: 0.8125rem;
   font-style: italic;
-  color: var(--hero-text-dark);
-  opacity: 0.55;
+  color: #5a6c78;
   margin-top: 1rem;
 }
 
@@ -1718,7 +1701,6 @@ body.home .capabilities {
   font-size: 1.05rem;
   line-height: 1.75;
   color: #3a4d5c;
-  opacity: 1;
   font-weight: 450;
   max-width: 640px;
   margin-bottom: 1.5rem;
@@ -1761,8 +1743,7 @@ body.home .sectors {
   max-width: 500px;
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--hero-text-dark);
-  opacity: 0.78;
+  color: #3a4d5c;
 }
 
 .sectors-table {
@@ -1841,8 +1822,7 @@ body.home .sectors {
 .sector-desc {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: var(--hero-text-dark);
-  opacity: 0.7;
+  color: #3a4d5c;
   max-width: 460px;
 }
 
@@ -2322,8 +2302,7 @@ body.home .sectors {
 .consultation-form-intro {
   font-size: 0.95rem;
   line-height: 1.75;
-  color: var(--hero-text-dark);
-  opacity: 0.75;
+  color: #3a4d5c;
   max-width: 540px;
   margin-bottom: 2rem;
 }
@@ -2357,7 +2336,7 @@ body.home .sectors {
 
 .form-group label .optional {
   font-weight: 500;
-  opacity: 0.5;
+  color: #5a6c78;
   text-transform: none;
   letter-spacing: normal;
 }
@@ -2377,8 +2356,7 @@ body.home .sectors {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--hero-text-dark);
-  opacity: 0.4;
+  color: #5a6c78;
 }
 
 .form-group input:focus,
@@ -2418,8 +2396,7 @@ body.home .sectors {
   grid-column: 1 / -1;
   font-size: 0.75rem;
   line-height: 1.5;
-  color: var(--hero-text-dark);
-  opacity: 0.55;
+  color: #5a6c78;
   text-align: center;
   margin-top: -0.5rem;
 }
@@ -2427,8 +2404,7 @@ body.home .sectors {
 .consultation-note {
   grid-column: 1 / -1;
   font-size: 0.8125rem;
-  color: var(--hero-text-dark);
-  opacity: 0.65;
+  color: #5a6c78;
   text-align: center;
 }
 
@@ -3722,8 +3698,7 @@ a.contact-strip-value:hover {
 .approach-matrix-closing {
   font-size: 0.9rem;
   font-style: italic;
-  color: var(--hero-text-dark);
-  opacity: 0.6;
+  color: #5a6c78;
   margin-top: 2.5rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--hero-border-dark);
