@@ -4158,6 +4158,24 @@ a.contact-strip-value:hover {
   background: rgba(176, 141, 87, 0.04);
 }
 
+button.topic-card {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  appearance: none;
+}
+
+.topic-card.is-active {
+  border-color: var(--gold);
+  background: var(--gold-dim);
+}
+
+.topic-card.is-active h3 {
+  color: var(--gold);
+}
+
 .topic-card h3 {
   font-family: var(--font-serif);
   font-weight: 600;
@@ -4173,6 +4191,39 @@ a.contact-strip-value:hover {
   margin: 0;
 }
 
+/* Topic filter status bar */
+.insights-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  background: var(--gold-dim);
+  font-size: 0.875rem;
+  color: var(--hero-text-dark);
+}
+
+.insights-filter-bar strong {
+  color: var(--gold);
+}
+
+.insights-filter-bar button {
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  color: var(--hero-text-dark);
+  cursor: pointer;
+  padding: 0;
+}
+
+.insights-filter-bar button:hover {
+  color: var(--gold);
+}
+
 /* Latest insights grid */
 .insight-card-grid {
   display: grid;
@@ -4184,6 +4235,10 @@ a.contact-strip-value:hover {
   display: block;
   padding-top: 1.75rem;
   border-top: 2px solid var(--border-gold);
+}
+
+.insight-card[hidden] {
+  display: none;
 }
 
 .insight-card h3 {
