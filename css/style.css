@@ -3789,3 +3789,45 @@ a.contact-strip-value:hover {
     padding: 2rem 1.5rem;
   }
 }
+
+/* ============================================
+   ABOUT US PAGE
+   ============================================ */
+
+.editorial-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.editorial-trio-item {
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border-gold);
+}
+
+.editorial-trio-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-hover);
+  margin-bottom: 0.85rem;
+}
+
+.editorial-trio-item p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .editorial-trio {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
