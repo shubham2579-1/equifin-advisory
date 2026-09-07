@@ -9,7 +9,7 @@
 //   LEAD_EMAIL_FROM  — verified sender (default: Resend's shared test sender —
 //                      replace with an address on a domain you've verified in Resend)
 
-const REQUIRED_FIELDS = ['name', 'company', 'email', 'phone', 'service', 'ticket_size'];
+const REQUIRED_FIELDS = ['name', 'company', 'email', 'phone', 'service'];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function escapeHtml(value) {
@@ -65,7 +65,7 @@ module.exports = async (req, res) => {
     ['Email', body.email],
     ['Phone', body.phone],
     ['Service', body.service],
-    ['Ticket Size', body.ticket_size],
+    ['Ticket Size', body.ticket_size || 'Not specified'],
     ['Message', body.message || '—'],
   ];
 
