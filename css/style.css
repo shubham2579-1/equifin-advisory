@@ -276,6 +276,7 @@ a {
   top: 0;
   z-index: 1000;
   background-color: var(--hero-ivory);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--hero-border-dark);
   padding: 1.15rem 0;
@@ -2429,6 +2430,16 @@ body.home .sectors {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--gold);
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+  border-color: #b3453c;
+}
+
+.form-group input:focus:invalid:not(:placeholder-shown),
+.form-group textarea:focus:invalid:not(:placeholder-shown) {
+  border-color: #b3453c;
 }
 
 .form-group select {
