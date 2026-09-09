@@ -4876,3 +4876,204 @@ button.topic-card {
     gap: 2rem;
   }
 }
+
+/* ============================================
+   ABOUT PAGE — VISUAL FRAMEWORK COMPONENTS
+   ============================================ */
+
+/* "How We Think About Capital" — 2x2 framework grid */
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.framework-card {
+  border: 1px solid var(--hero-border-dark);
+  border-radius: 10px;
+  padding: 1.85rem 1.75rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.framework-card .service-scenario-num {
+  margin-bottom: 0.6rem;
+}
+
+.framework-card h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: var(--hero-text-dark);
+  margin-bottom: 0.6rem;
+  line-height: 1.32;
+}
+
+.framework-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #3a4d5c;
+  margin: 0;
+  max-width: none;
+}
+
+@media (max-width: 720px) {
+  .framework-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* "How We Work" — premium horizontal process flow */
+.process-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0 0.5rem;
+  position: relative;
+}
+
+.process-track::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: var(--hero-border-dark);
+}
+
+.process-node {
+  position: relative;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.process-node::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #efeae0;
+  border: 1px solid var(--gold);
+}
+
+.process-node::after {
+  content: '';
+  position: absolute;
+  top: 5.5px;
+  left: 5.5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.process-node-num {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.process-node-title {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--hero-text-dark);
+  margin-bottom: 0.45rem;
+}
+
+.process-node-desc {
+  font-size: 0.825rem;
+  line-height: 1.6;
+  color: #3a4d5c;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .process-track {
+    grid-template-columns: 1fr;
+    gap: 1.85rem;
+  }
+
+  .process-track::before {
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+
+  .process-node {
+    padding-top: 0;
+    padding-left: 34px;
+  }
+
+  .process-node::before,
+  .process-node::after {
+    top: 2px;
+  }
+}
+
+/* "Why EquiFin" — icon-led framework (not generic feature cards) */
+.icon-framework-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem 2rem;
+  margin-top: 0.5rem;
+}
+
+.icon-framework-item {
+  padding-top: 1.35rem;
+  border-top: 2px solid var(--border-gold);
+}
+
+.icon-framework-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+  color: var(--gold);
+  margin-bottom: 1.1rem;
+}
+
+.icon-framework-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-framework-item h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: var(--hero-text-dark);
+  margin-bottom: 0.6rem;
+  line-height: 1.32;
+}
+
+.icon-framework-item p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #3a4d5c;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .icon-framework-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
