@@ -12,17 +12,35 @@ const mime = {
   '.woff': 'font/woff', '.woff2': 'font/woff2'
 };
 
-http.createServer((req, res) => {
-  let filePath = path.join(root, decodeURIComponent(req.url.split('?')[0]));
-  if (filePath.endsWith(path.sep)) filePath = path.join(filePath, 'index.html');
+function serveFile(filePath, res) {
   fs.readFile(filePath, (err, data) => {
     if (err) {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('Not found: ' + req.url);
+      res.end('Not found');
       return;
     }
     const ext = path.extname(filePath).toLowerCase();
     res.writeHead(200, { 'Content-Type': mime[ext] || 'application/octet-stream' });
     res.end(data);
+  });
+}
+
+http.createServer((req, res) => {
+  let filePath = path.join(root, decodeURIComponent(req.url.split('?')[0]));
+  if (filePath.endsWith(path.sep)) filePath = path.join(filePath, 'index.html');
+  fs.readFile(filePath, (err, data) => {
+    if (!err) {
+      const ext = path.extname(filePath).toLowerCase();
+      res.writeHead(200, { 'Content-Type': mime[ext] || 'application/octet-stream' });
+      res.end(data);
+      return;
+    }
+    // clean-URL fallback: mimic Vercel's cleanUrls for local testing
+    if (!path.extname(filePath)) {
+      serveFile(filePath + '.html', res);
+      return;
+    }
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('Not found: ' + req.url);
   });
 }).listen(port, () => console.log(`Static server running at http://localhost:${port}`));
