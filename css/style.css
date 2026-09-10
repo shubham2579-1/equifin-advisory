@@ -3942,24 +3942,24 @@ a.contact-strip-value:hover {
    ============================================ */
 
 /* Leadership profile — editorial two-column layout */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2.5rem;
+}
+
 .leadership-profile {
   display: grid;
   grid-template-columns: 220px 1fr;
-  gap: 3rem;
+  gap: 1.75rem;
   align-items: start;
-  padding: 3rem 0;
-  border-top: 1px solid var(--hero-border-dark);
-}
-
-.leadership-profile:first-of-type {
-  border-top: none;
-  padding-top: 0;
 }
 
 .leadership-portrait {
   width: 220px;
   height: 220px;
-  border-radius: 4px;
+  border-radius: 50%;
+  overflow: hidden;
   background-color: var(--bg-dark);
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
   background-repeat: repeat;
@@ -3975,6 +3975,12 @@ a.contact-strip-value:hover {
   font-weight: 600;
   font-size: 2.5rem;
   color: var(--gold);
+}
+
+.leadership-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .leadership-name {
@@ -4002,6 +4008,7 @@ a.contact-strip-value:hover {
   color: var(--hero-text-dark);
   margin-bottom: 1.25rem;
   max-width: 640px;
+  text-align: justify;
 }
 
 .leadership-bio p {
@@ -4105,6 +4112,11 @@ a.contact-strip-value:hover {
 }
 
 @media (max-width: 768px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
   .leadership-profile {
     grid-template-columns: 1fr;
     gap: 1.5rem;
