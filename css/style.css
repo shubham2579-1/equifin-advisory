@@ -169,20 +169,24 @@ a {
   align-items: center;
   justify-content: center;
   background-color: var(--gold);
+  background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 42%);
   color: var(--bg-dark);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   padding: 0.95rem 1.85rem;
   border: 1px solid var(--gold);
-  border-radius: 2px;
+  border-radius: 4px;
+  box-shadow: 0 10px 26px -10px rgba(176, 141, 87, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   transition: all 0.25s ease;
 }
 
 .btn-primary:hover {
   background-color: var(--gold-hover);
+  background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 42%);
   border-color: var(--gold-hover);
   color: #070c12;
+  box-shadow: 0 14px 32px -10px rgba(176, 141, 87, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .btn-secondary {
@@ -479,6 +483,8 @@ a {
   padding: 3.5rem 0 4rem;
   border-bottom: 1px solid var(--hero-border-dark);
   background-color: var(--hero-ivory);
+  background-image: radial-gradient(560px circle at 88% -18%, rgba(176, 141, 87, 0.08), transparent 58%);
+  background-repeat: no-repeat;
 }
 
 body.home .hero {
@@ -2432,7 +2438,8 @@ body.home .sectors {
   border: 1px solid var(--hero-border-dark);
   border-radius: 6px;
   padding: 0.85rem 1rem;
-  transition: border-color 0.2s ease;
+  box-shadow: inset 0 1px 2px rgba(7, 28, 44, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-group input::placeholder,
@@ -2445,6 +2452,7 @@ body.home .sectors {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.16), inset 0 1px 2px rgba(7, 28, 44, 0.04);
 }
 
 .form-group input:invalid:not(:placeholder-shown),
@@ -5223,20 +5231,7 @@ body.home {
   --shadow-light-lift: 0 20px 40px -18px rgba(7, 28, 44, 0.28);
 }
 
-/* ---- Buttons (glossy sheen + soft glow, same gold) ---- */
-body.home .btn-primary {
-  position: relative;
-  background-color: var(--gold);
-  background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 42%);
-  box-shadow: 0 10px 26px -10px rgba(176, 141, 87, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-}
-
-body.home .btn-primary:hover {
-  background-color: var(--gold-hover);
-  background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 42%);
-  box-shadow: 0 14px 32px -10px rgba(176, 141, 87, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
+/* ---- Buttons: base gloss now lives globally in the shared .btn-primary rule ---- */
 body.home .hero-actions .btn-secondary {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -5449,24 +5444,127 @@ body.home .consultation-panel {
   box-shadow: var(--shadow-dark-card);
 }
 
-body.home .form-group input,
-body.home .form-group select,
-body.home .form-group textarea {
-  box-shadow: inset 0 1px 2px rgba(7, 28, 44, 0.04);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-body.home .form-group input:focus,
-body.home .form-group select:focus,
-body.home .form-group textarea:focus {
-  box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.16), inset 0 1px 2px rgba(7, 28, 44, 0.04);
-}
+/* Form input focus glow now lives globally in the shared .form-group rule */
 
 @media (prefers-reduced-motion: reduce) {
   body.home .deal-matrix-box,
   body.home .tr-item,
   body.home .tx-item,
   body.home .www-item {
+    transition: none;
+  }
+}
+
+/* ============================================
+   SITE-WIDE PREMIUM GLOSSY LAYER
+   Extends the homepage's Recur-Club-inspired depth to the
+   shared components used across every other page — same
+   navy / gold / ivory palette only. No content, copy or
+   layout changes; purely additive background/shadow/gloss.
+   ============================================ */
+
+/* ---- Dark CTA box: every service & sector detail page,
+   About Us, Team, Our Approach (23 pages) ---- */
+.service-detail-cta {
+  position: relative;
+  border-radius: 14px;
+  border: 1px solid var(--border-gold);
+  background-image:
+    linear-gradient(155deg, rgba(247, 245, 240, 0.07) 0%, rgba(247, 245, 240, 0) 34%),
+    radial-gradient(360px circle at 100% 0%, rgba(176, 141, 87, 0.16), transparent 60%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+  box-shadow: 0 30px 60px -22px rgba(0, 0, 0, 0.5), 0 12px 26px -12px rgba(0, 0, 0, 0.35);
+}
+
+/* ---- Checklist & table surfaces (30 / 18 pages) ---- */
+.service-checklist,
+.service-table-wrap {
+  box-shadow: 0 20px 40px -22px rgba(7, 28, 44, 0.16);
+}
+
+/* ---- Framework / icon / process / outcome cards
+   (About Us, Team, Our Approach) ---- */
+.framework-card,
+.approach-outcome-card,
+.approach-dual-col {
+  box-shadow: 0 20px 40px -20px rgba(7, 28, 44, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.framework-card:hover,
+.approach-outcome-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 50px -18px rgba(7, 28, 44, 0.2);
+}
+
+.icon-framework-icon {
+  box-shadow: 0 0 0 6px rgba(176, 141, 87, 0.08);
+}
+
+.process-node::before {
+  box-shadow: 0 0 10px rgba(176, 141, 87, 0.35);
+}
+
+.approach-dual-center-badge {
+  box-shadow: 0 8px 20px -8px rgba(176, 141, 87, 0.3);
+}
+
+/* ---- Directory cards: services.html / sectors.html listings ---- */
+.directory-card {
+  box-shadow: 0 18px 36px -20px rgba(7, 28, 44, 0.12);
+}
+
+.directory-card:hover {
+  box-shadow: 0 26px 48px -18px rgba(7, 28, 44, 0.2);
+}
+
+/* ---- Contact Us page ---- */
+.contact-office-card {
+  box-shadow: 0 20px 40px -20px rgba(7, 28, 44, 0.14);
+}
+
+.contact-option-card,
+.topic-card {
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.contact-option-card:hover,
+.topic-card:hover {
+  box-shadow: 0 20px 40px -22px rgba(7, 28, 44, 0.18);
+  transform: translateY(-2px);
+}
+
+/* ---- Leadership portrait (Team page) ---- */
+.leadership-portrait {
+  box-shadow: 0 20px 40px -18px rgba(7, 28, 44, 0.3);
+}
+
+/* ---- Insight articles & listing ---- */
+.article-hero,
+.article-body,
+.article-soft-cta {
+  background-image: radial-gradient(500px circle at 92% -15%, rgba(176, 141, 87, 0.06), transparent 55%);
+  background-repeat: no-repeat;
+}
+
+.article-soft-cta-box {
+  box-shadow: 0 20px 40px -22px rgba(7, 28, 44, 0.14);
+}
+
+/* ---- Footer: identical markup on every page ---- */
+.site-footer {
+  position: relative;
+  background-image: radial-gradient(700px circle at 85% -30%, rgba(176, 141, 87, 0.07), transparent 55%);
+  background-repeat: no-repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .framework-card,
+  .approach-outcome-card,
+  .directory-card,
+  .contact-option-card,
+  .topic-card {
     transition: none;
   }
 }
