@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+
   /* High-end Indian institutional palette: Deep Navy, Gold, Cream/Off-white
      (aligned to EquiFin Advisory - Header Assignment's navy/gold/ivory palette) */
   --bg-dark: #071c2c;
