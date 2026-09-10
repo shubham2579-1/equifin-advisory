@@ -5077,3 +5077,91 @@ button.topic-card {
     gap: 1.75rem;
   }
 }
+
+/* ============================================
+   SERVICES / SECTORS DIRECTORY — icon-led card grid
+   ============================================ */
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem 2rem;
+}
+
+.directory-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.85rem 1.75rem;
+  border: 1px solid var(--hero-border-dark);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.55);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.directory-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.directory-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
+}
+
+.directory-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.directory-card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.directory-card-index {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--gold);
+}
+
+.directory-card-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--hero-text-dark);
+  margin-bottom: 0.65rem;
+  line-height: 1.32;
+}
+
+.directory-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #3a4d5c;
+  margin-bottom: 1.1rem;
+  flex-grow: 1;
+}
+
+.directory-card-keywords {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5a6c78;
+}
+
+@media (max-width: 860px) {
+  .directory-grid {
+    grid-template-columns: 1fr;
+  }
+}
