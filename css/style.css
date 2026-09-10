@@ -3157,16 +3157,28 @@ a.contact-strip-value:hover {
   margin-bottom: 2.5rem;
 }
 
+.contact-office-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  max-width: 1080px;
+}
+
 .contact-office-card {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 2.5rem;
+  gap: 1.5rem;
   align-items: start;
-  max-width: 720px;
   padding: 2.5rem;
   background: rgba(255, 255, 255, 0.55);
   border: 1px solid var(--hero-border-dark);
   border-radius: 10px;
+}
+
+@media (max-width: 720px) {
+  .contact-office-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-office-marker {
