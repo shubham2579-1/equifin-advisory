@@ -187,7 +187,7 @@
                 </span>
                 <span class="nav-mega-text">
                   <span class="nav-mega-title">Supply Chain Finance</span>
-                  <span class="nav-mega-desc">Anchor-Led, Treds &amp; Invoice Discounting</span>
+                  <span class="nav-mega-desc">Anchor-Led, TReDS &amp; Invoice Discounting</span>
                 </span>
               </a>
 
@@ -700,6 +700,7 @@
     const isOpen = nav.classList.toggle('is-open');
     toggle.classList.toggle('is-active', isOpen);
     toggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('nav-locked', isOpen);
   });
 
   const megaItems = document.querySelectorAll('.nav-item-mega');
@@ -731,6 +732,7 @@
       nav.classList.remove('is-open');
       toggle.classList.remove('is-active');
       toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-locked');
     }
   });
 
@@ -744,6 +746,7 @@
     nav.classList.remove("is-open");
     toggle.classList.remove("is-active");
     toggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-locked");
   });
 </script>
 

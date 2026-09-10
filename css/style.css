@@ -489,7 +489,7 @@ a {
   width: 22px;
   height: 2px;
   background-color: var(--hero-text-dark);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .nav-toggle span::before {
@@ -500,6 +500,18 @@ a {
 .nav-toggle span::after {
   content: '';
   transform: translateY(4.5px);
+}
+
+.nav-toggle.is-active span {
+  background-color: transparent;
+}
+
+.nav-toggle.is-active span::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.nav-toggle.is-active span::after {
+  transform: translateY(0) rotate(-45deg);
 }
 
 /* SECTION 1: HERO */
@@ -2711,7 +2723,8 @@ body.home .sectors {
     overflow-y: auto;
   }
 
-  body:has(.main-nav.is-open) {
+  body:has(.main-nav.is-open),
+  body.nav-locked {
     overflow: hidden;
   }
 
@@ -5602,5 +5615,42 @@ body.home .consultation-panel {
   .contact-option-card,
   .topic-card {
     transition: none;
+  }
+}
+
+/* ============================================
+   PRINT
+   Strip chrome and dark backgrounds; keep body
+   copy readable as black text on white paper.
+   ============================================ */
+@media print {
+  .site-header,
+  .cookie-consent-banner,
+  .skip-link,
+  .nav-toggle,
+  .btn-primary,
+  .btn-secondary,
+  .header-cta {
+    display: none !important;
+  }
+
+  * {
+    background: #fff !important;
+    background-image: none !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  .site-footer {
+    border-top: 1px solid #999;
   }
 }
