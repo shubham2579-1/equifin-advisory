@@ -2173,10 +2173,18 @@ body.home .sectors {
 }
 
 .footer-contact-phone {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.8125rem;
   color: var(--text-muted);
   transition: color 0.2s ease;
+  margin-bottom: 0.6rem;
+}
+
+.footer-contact-phone svg {
+  color: var(--gold);
+  flex-shrink: 0;
 }
 
 .footer-contact-phone:hover {
@@ -2184,11 +2192,18 @@ body.home .sectors {
 }
 
 .footer-email {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--text-main);
   transition: color 0.2s ease;
+}
+
+.footer-email svg {
+  color: var(--gold);
+  flex-shrink: 0;
 }
 
 .footer-email:hover {
@@ -3208,20 +3223,31 @@ a.contact-strip-value:hover {
   margin-bottom: 1.1rem;
 }
 
-.contact-office-contact {
+.contact-office-shared {
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--hero-border-dark);
 }
 
-.contact-office-contact a {
+.contact-office-shared a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--hero-text-dark);
   transition: color 0.2s ease;
 }
 
-.contact-office-contact a:hover {
+.contact-office-shared a svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.contact-office-shared a:hover {
   color: var(--gold);
 }
 
