@@ -5203,3 +5203,270 @@ button.topic-card {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   HOME PAGE ONLY — PREMIUM GLOSSY VISUAL LAYER
+   Recur-Club-inspired depth, lighting and gradients,
+   built entirely from EquiFin's existing navy / gold /
+   ivory palette. Every rule below is scoped to
+   body.home so no other page is affected.
+   ============================================ */
+
+body.home {
+  --glow-strong: rgba(176, 141, 87, 0.16);
+  --glow-soft: rgba(176, 141, 87, 0.10);
+  --glow-faint: rgba(176, 141, 87, 0.055);
+  --sheen-line: rgba(247, 245, 240, 0.07);
+  --card-radius: 14px;
+  --shadow-dark-card: 0 30px 60px -22px rgba(0, 0, 0, 0.5), 0 12px 26px -12px rgba(0, 0, 0, 0.35);
+  --shadow-dark-card-hover: 0 38px 74px -20px rgba(0, 0, 0, 0.55), 0 16px 32px -12px rgba(0, 0, 0, 0.4);
+  --shadow-light-lift: 0 20px 40px -18px rgba(7, 28, 44, 0.28);
+}
+
+/* ---- Buttons (glossy sheen + soft glow, same gold) ---- */
+body.home .btn-primary {
+  position: relative;
+  background-color: var(--gold);
+  background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 42%);
+  box-shadow: 0 10px 26px -10px rgba(176, 141, 87, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+body.home .btn-primary:hover {
+  background-color: var(--gold-hover);
+  background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 42%);
+  box-shadow: 0 14px 32px -10px rgba(176, 141, 87, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+body.home .hero-actions .btn-secondary {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background-color: rgba(247, 245, 240, 0.5);
+}
+
+/* ---- HERO ---- */
+body.home .hero {
+  background-image:
+    radial-gradient(620px circle at 84% -14%, var(--glow-soft), transparent 60%),
+    radial-gradient(460px circle at -8% 65%, var(--glow-faint), transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+body.home .deal-matrix-box {
+  border-radius: var(--card-radius);
+  border-color: var(--border-gold);
+  background-color: var(--bg-dark);
+  background-image:
+    linear-gradient(155deg, var(--sheen-line) 0%, rgba(247, 245, 240, 0) 34%),
+    radial-gradient(420px circle at 105% -10%, rgba(176, 141, 87, 0.16), transparent 62%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+  box-shadow: var(--shadow-dark-card);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+body.home .deal-matrix-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-dark-card-hover);
+}
+
+/* ---- TRACK RECORD ---- */
+body.home .track-record {
+  background-image:
+    radial-gradient(560px circle at 92% -20%, var(--glow-soft), transparent 55%),
+    radial-gradient(420px circle at 4% 115%, var(--glow-faint), transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+body.home .tr-item {
+  transition: transform 0.3s ease;
+}
+
+body.home .tr-item:hover {
+  transform: translateY(-4px);
+}
+
+body.home .tr-number {
+  background: linear-gradient(135deg, var(--gold-hover) 0%, #f1d9b0 45%, var(--gold-hover) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---- SELECTED TRANSACTION EXPERIENCE ---- */
+body.home .transactions {
+  background-image:
+    radial-gradient(600px circle at 8% -15%, var(--glow-soft), transparent 55%),
+    radial-gradient(500px circle at 100% 110%, var(--glow-faint), transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+body.home .tx-item {
+  border-radius: 0 10px 10px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+body.home .tx-item:hover {
+  transform: translateY(-4px);
+  background-color: rgba(176, 141, 87, 0.035);
+  box-shadow: var(--shadow-light-lift);
+}
+
+body.home .tx-icon {
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+body.home .tx-item:hover .tx-icon {
+  background-color: var(--gold-dim);
+  box-shadow: 0 0 0 4px rgba(176, 141, 87, 0.08);
+}
+
+body.home .tx-amount {
+  background: linear-gradient(135deg, var(--gold) 0%, #7d6339 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---- APPROACH ---- */
+body.home .approach-texture {
+  background-image:
+    radial-gradient(650px circle at 14% -5%, var(--glow-soft), transparent 55%),
+    radial-gradient(520px circle at 100% 105%, var(--glow-faint), transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+body.home .journey-line {
+  background: linear-gradient(90deg, transparent, var(--border-gold) 15%, var(--border-gold) 85%, transparent);
+  box-shadow: 0 0 14px rgba(176, 141, 87, 0.28);
+}
+
+body.home .marquee-track-wrap {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+/* ---- CAPABILITIES ---- */
+body.home .capabilities {
+  background-image:
+    radial-gradient(600px circle at 92% -12%, var(--glow-soft), transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, repeat;
+}
+
+body.home .cap-row {
+  border-radius: 0 10px 10px 0;
+  transition: padding-left 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.home .cap-row:hover {
+  background-color: rgba(176, 141, 87, 0.045);
+  box-shadow: var(--shadow-light-lift);
+}
+
+/* ---- WHO WE WORK WITH ---- */
+body.home .who-we-work-with {
+  background-image:
+    radial-gradient(560px circle at 6% -15%, var(--glow-soft), transparent 55%),
+    radial-gradient(460px circle at 100% 115%, var(--glow-faint), transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+body.home .www-item {
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.home .www-item:hover {
+  background-color: rgba(247, 245, 240, 0.035);
+}
+
+body.home .www-icon {
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+body.home .www-item:hover .www-icon {
+  filter: drop-shadow(0 0 8px rgba(176, 141, 87, 0.5));
+}
+
+/* ---- SECTORS ---- */
+body.home .sectors {
+  background-image:
+    radial-gradient(600px circle at 8% 115%, var(--glow-soft), transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, repeat;
+}
+
+body.home .sector-row {
+  border-radius: 0 10px 10px 0;
+  transition: padding-left 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.home .sector-row:hover {
+  background-color: rgba(176, 141, 87, 0.045);
+  box-shadow: var(--shadow-light-lift);
+}
+
+/* ---- WHY EQUIFIN ---- */
+body.home .why {
+  background-image:
+    radial-gradient(600px circle at 100% -15%, var(--glow-soft), transparent 55%),
+    radial-gradient(460px circle at 0% 115%, var(--glow-faint), transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+body.home .why-item {
+  border-radius: 0 10px 10px 0;
+  transition: padding-left 0.3s ease, background-color 0.3s ease;
+}
+
+body.home .why-item:hover {
+  background-color: rgba(247, 245, 240, 0.035);
+}
+
+/* ---- CONSULTATION ---- */
+body.home .consultation {
+  background-image:
+    radial-gradient(650px circle at 10% 115%, var(--glow-faint), transparent 55%),
+    radial-gradient(520px circle at 96% -12%, var(--glow-soft), transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23071C2C'%20stroke-width='1'%20stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+body.home .consultation-panel {
+  border: 1px solid var(--border-gold);
+  background-color: var(--bg-dark);
+  background-image:
+    linear-gradient(160deg, var(--sheen-line) 0%, rgba(247, 245, 240, 0) 36%),
+    radial-gradient(380px circle at 100% 100%, rgba(176, 141, 87, 0.14), transparent 62%),
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='46'%3E%3Cpath%20d='M0%2046L46%200'%20stroke='%23F7F5F0'%20stroke-width='1'%20stroke-opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, repeat;
+  box-shadow: var(--shadow-dark-card);
+}
+
+body.home .form-group input,
+body.home .form-group select,
+body.home .form-group textarea {
+  box-shadow: inset 0 1px 2px rgba(7, 28, 44, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.home .form-group input:focus,
+body.home .form-group select:focus,
+body.home .form-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.16), inset 0 1px 2px rgba(7, 28, 44, 0.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home .deal-matrix-box,
+  body.home .tr-item,
+  body.home .tx-item,
+  body.home .www-item {
+    transition: none;
+  }
+}
