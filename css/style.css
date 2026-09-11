@@ -3148,8 +3148,9 @@ a.contact-strip-value:hover {
 
 .contact-options-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.75rem;
+  max-width: 700px;
 }
 
 .contact-option-card {
@@ -3202,97 +3203,6 @@ a.contact-strip-value:hover {
 
 .contact-option-card:hover .contact-option-arrow {
   gap: 0.65rem;
-  color: var(--gold);
-}
-
-/* Office section */
-.contact-office {
-  padding: 70px 0;
-  background-color: var(--hero-ivory);
-  border-top: 1px solid var(--hero-border-dark);
-}
-
-.contact-office .section-title {
-  color: var(--hero-text-dark);
-  margin-bottom: 2.5rem;
-}
-
-.contact-office-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.75rem;
-  max-width: 520px;
-}
-
-.contact-office-card {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
-  align-items: start;
-  padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid var(--hero-border-dark);
-  border-radius: 10px;
-}
-
-@media (max-width: 720px) {
-  .contact-office-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.contact-office-marker {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--gold-dim);
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-office-city {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 1.15rem;
-  color: var(--hero-text-dark);
-  margin-bottom: 0.75rem;
-}
-
-.contact-office-address {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: #3a4d5c;
-  margin-bottom: 1.1rem;
-}
-
-.contact-office-shared {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem 2.5rem;
-  margin-top: 1.75rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--hero-border-dark);
-}
-
-.contact-office-shared a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--hero-text-dark);
-  transition: color 0.2s ease;
-}
-
-.contact-office-shared a svg {
-  color: var(--gold);
-  flex-shrink: 0;
-}
-
-.contact-office-shared a:hover {
   color: var(--gold);
 }
 
@@ -3412,11 +3322,6 @@ a.contact-strip-value:hover {
 
   .process-step:last-child {
     border-bottom: none;
-  }
-
-  .contact-office-card {
-    grid-template-columns: 1fr;
-    padding: 2rem 1.5rem;
   }
 }
 
@@ -5569,10 +5474,6 @@ body.home .consultation-panel {
 }
 
 /* ---- Contact Us page ---- */
-.contact-office-card {
-  box-shadow: 0 20px 40px -20px rgba(7, 28, 44, 0.14);
-}
-
 .contact-option-card,
 .topic-card {
   transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
