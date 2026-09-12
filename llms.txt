@@ -23,6 +23,7 @@ EquiFin Advisory does not act as a lender and does not extend credit or accept d
 
 - [Corporate Finance](https://equifinadvisory.com/service-corporate-finance.html): Debt advisory for growth, acquisitions and refinancing.
 - [Debt Syndication](https://equifinadvisory.com/service-debt-syndication.html): Lender mapping and coordinated execution across multiple lenders.
+- [Acquisition Finance](https://equifinadvisory.com/service-acquisition-finance.html): Debt structured across the acquisition vehicle, promoter contribution and target balance sheet.
 - [Project Finance](https://equifinadvisory.com/service-project-finance.html): Long-term debt structured around project economics and construction risk.
 - [Real Estate Funding](https://equifinadvisory.com/service-real-estate-funding.html): Developer and asset-owner financing across the project lifecycle.
 - [Land Acquisition Funding](https://equifinadvisory.com/service-land-acquisition-funding.html): Structured capital for land and development rights before construction.
@@ -30,6 +31,9 @@ EquiFin Advisory does not act as a lender and does not extend credit or accept d
 - [Approval Funding](https://equifinadvisory.com/service-approval-funding.html): Pre-construction capital for statutory approvals and premiums.
 - [FSI Premium Funding](https://equifinadvisory.com/service-fsi-premium-funding.html): Capital to pay fungible/premium FSI charges and unlock saleable area.
 - [Construction Finance](https://equifinadvisory.com/service-construction-finance.html): Milestone-linked funding for the active building phase.
+- [Last-Mile Funding](https://equifinadvisory.com/service-last-mile-funding.html): Bridge capital to finish a project close to completion.
+- [Inventory Funding](https://equifinadvisory.com/service-inventory-funding.html): Capital against unsold, ready real estate stock.
+- [Structured Debt](https://equifinadvisory.com/service-structured-debt-real-estate.html): Mezzanine and hybrid instruments for real estate capital-stack gaps.
 - [Redevelopment Finance](https://equifinadvisory.com/service-redevelopment-finance.html): Corpus, transit rent and construction funding for Mumbai/MMR redevelopment.
 - [Stalled Project Funding](https://equifinadvisory.com/service-stalled-project-funding.html): Diagnosis and completion capital for projects that have stopped mid-way.
 - [Working Capital Finance](https://equifinadvisory.com/service-working-capital-finance.html): Cash Credit, WCDL, LC, BG and limit enhancement.
