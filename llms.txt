@@ -57,6 +57,20 @@ EquiFin Advisory does not act as a lender and does not extend credit or accept d
 - [Partner Buyout Financing](https://equifinadvisory.com/service-partner-buyout-financing.html): Capital for buying out a business partner's stake.
 - [Mezzanine Finance](https://equifinadvisory.com/service-mezzanine-finance.html): Subordinated, equity-linked capital bridging debt and equity.
 - [Bridge Financing](https://equifinadvisory.com/service-bridge-financing.html): Short-term capital structured against a defined take-out event.
+- [Greenfield Project Finance](https://equifinadvisory.com/service-greenfield-project-finance.html): Debt for new projects built from the ground up.
+- [Brownfield Project Finance](https://equifinadvisory.com/service-brownfield-project-finance.html): Financing for expansion of an existing operation.
+- [Infrastructure Project Finance](https://equifinadvisory.com/service-infrastructure-project-finance.html): Long-tenor debt for roads, utilities and infrastructure assets.
+- [Renewable Energy Project Finance](https://equifinadvisory.com/service-renewable-energy-project-finance.html): Debt structured against long-term power purchase agreements.
+- [Solar Project Finance](https://equifinadvisory.com/service-solar-project-finance.html): Financing sized against projected generation and PPA revenue.
+- [Wind Project Finance](https://equifinadvisory.com/service-wind-project-finance.html): Debt structured around wind resource assessment and PPA revenue.
+- [Industrial Project Finance](https://equifinadvisory.com/service-industrial-project-finance.html): Financing for new manufacturing capacity and ramp-up.
+- [Warehouse Project Finance](https://equifinadvisory.com/service-warehouse-project-finance.html): Construction-stage debt for Grade-A warehousing ahead of lease-up.
+- [Logistics Project Finance](https://equifinadvisory.com/service-logistics-project-finance.html): Debt for logistics parks, cold-chain and distribution facilities.
+- [Hotel Project Finance](https://equifinadvisory.com/service-hotel-project-finance.html): Financing for hospitality development against projected occupancy.
+- [Hospital Project Finance](https://equifinadvisory.com/service-hospital-project-finance.html): Debt structured for healthcare facility construction and ramp-up.
+- [Data Centre Project Finance](https://equifinadvisory.com/service-data-centre-project-finance.html): Financing for power-intensive digital infrastructure builds.
+- [Term Loan for Projects](https://equifinadvisory.com/service-term-loan-projects.html): Standard term-loan-structured project debt.
+- [Capex Funding](https://equifinadvisory.com/service-capex-funding.html): Financing for capacity expansion and equipment purchases.
 
 ## Sectors
 
