@@ -4821,9 +4821,38 @@ button.topic-card {
   color: var(--gold);
 }
 
+.sitemap-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sitemap-row {
+  margin-top: 3rem;
+}
+
+.sitemap-group:empty {
+  display: none;
+}
+
+.sitemap-group-full {
+  grid-column: 1 / -1;
+}
+
+.sitemap-links-flow {
+  column-count: 4;
+  column-gap: 2rem;
+}
+
+.sitemap-links-flow li {
+  break-inside: avoid;
+}
+
 @media (max-width: 1024px) {
   .sitemap-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sitemap-links-flow {
+    column-count: 2;
   }
 }
 
@@ -4831,6 +4860,10 @@ button.topic-card {
   .sitemap-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .sitemap-links-flow {
+    column-count: 1;
   }
 }
 
