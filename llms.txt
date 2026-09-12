@@ -41,6 +41,13 @@ EquiFin Advisory does not act as a lender and does not extend credit or accept d
 - [Lease Rental Discounting](https://equifinadvisory.com/service-lease-rental-discounting.html): Rent-backed institutional capital.
 - [Strategic Finance Advisory](https://equifinadvisory.com/service-strategic-finance-advisory.html): Financial governance, capital planning and institutional readiness.
 - [Credit Rating Advisory](https://equifinadvisory.com/service-credit-rating-advisory.html): Rating enhancement strategy.
+- [Real Estate Refinancing](https://equifinadvisory.com/service-real-estate-refinancing.html): Refinancing and debt takeover for real estate projects funded on costlier or misaligned terms.
+- [AIF & Private Credit for Real Estate](https://equifinadvisory.com/service-aif-private-credit-real-estate.html): Alternative Investment Fund and private credit capital for situations banks and NBFCs won't underwrite.
+- [Commercial Property Finance](https://equifinadvisory.com/service-commercial-property-finance.html): Loan against completed commercial property, including for developers holding leased inventory.
+- [Corporate Refinancing](https://equifinadvisory.com/service-corporate-refinancing.html): Replacing existing corporate debt with better-priced or better-structured facilities.
+- [Debt Restructuring Advisory](https://equifinadvisory.com/service-debt-restructuring.html): Renegotiating terms for businesses under genuine financial stress.
+- [Consortium Finance Advisory](https://equifinadvisory.com/service-consortium-finance.html): Structuring and coordinating multi-bank consortium lending arrangements.
+- [Promoter Funding Solutions](https://equifinadvisory.com/service-promoter-funding.html): Capital raised against promoter holdings, separate from the operating company's balance sheet.
 
 ## Sectors
 
@@ -77,6 +84,14 @@ EquiFin Advisory does not act as a lender and does not extend credit or accept d
 - [Consortium Lending vs. Multiple Banking Arrangements: What Actually Changes](https://equifinadvisory.com/insight-consortium-vs-multiple-banking.html)
 - [Letter of Credit vs. Bank Guarantee: Two Instruments That Solve Different Risks](https://equifinadvisory.com/insight-letter-of-credit-vs-bank-guarantee.html)
 - [What Is a Healthy Debt-to-Equity Ratio? What Lenders in India Actually Look At](https://equifinadvisory.com/insight-debt-to-equity-ratio-explained.html)
+- [What Is a Good Debt-to-EBITDA Ratio? How Lenders Actually Read It](https://equifinadvisory.com/insight-debt-to-ebitda-ratio.html)
+- [How Lenders Use Interest Coverage Ratio to Assess Debt Capacity](https://equifinadvisory.com/insight-interest-coverage-ratio.html)
+- [Bank vs NBFC: Which Fits Your Construction or Real Estate Finance Need?](https://equifinadvisory.com/insight-bank-vs-nbfc-construction-finance.html)
+- [AIF vs NBFC: Which Is Better for Real Estate Funding?](https://equifinadvisory.com/insight-aif-vs-nbfc-real-estate-funding.html)
+- [What Are the Main Real Estate Funding Options in India?](https://equifinadvisory.com/insight-real-estate-funding-options-india.html)
+- [Can Developers Get Funding Before RERA Registration?](https://equifinadvisory.com/insight-funding-before-rera-registration.html)
+- [Can Developers Raise Finance While Approvals Are Pending?](https://equifinadvisory.com/insight-funding-with-approvals-pending.html)
+- [Real Estate Funding for New Developers: Can You Raise Project Finance?](https://equifinadvisory.com/insight-funding-for-new-developer.html)
 
 ## Optional
 
