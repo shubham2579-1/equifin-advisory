@@ -4131,33 +4131,6 @@ a.contact-strip-value:hover {
   margin-bottom: 0.75rem;
 }
 
-/* Featured insight */
-.featured-insight {
-  display: block;
-  border: 1px solid var(--hero-border-dark);
-  border-radius: 10px;
-  padding: 3rem;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.featured-insight-title {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
-  line-height: 1.3;
-  color: var(--hero-text-dark);
-  margin-bottom: 1rem;
-  max-width: 780px;
-}
-
-.featured-insight-excerpt {
-  font-size: 0.9875rem;
-  line-height: 1.75;
-  color: #3a4d5c;
-  max-width: 680px;
-  margin-bottom: 1.5rem;
-}
-
 .insight-meta {
   display: flex;
   flex-wrap: wrap;
@@ -4176,22 +4149,6 @@ a.contact-strip-value:hover {
 }
 
 .insight-meta .dot {
-  color: var(--gold);
-}
-
-.featured-insight-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--hero-text-dark);
-  transition: gap 0.2s ease, color 0.2s ease;
-}
-
-.featured-insight:hover .featured-insight-link {
-  gap: 0.75rem;
   color: var(--gold);
 }
 
@@ -4737,10 +4694,6 @@ button.topic-card {
   .desk-note-grid,
   .related-insights-grid {
     grid-template-columns: 1fr;
-  }
-
-  .featured-insight {
-    padding: 2rem 1.5rem;
   }
 
   .capital-note {
