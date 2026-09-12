@@ -4101,8 +4101,12 @@ a.contact-strip-value:hover {
    ============================================ */
 
 .insights-section {
-  padding: 70px 0;
+  padding: 44px 0;
   background-color: var(--hero-ivory);
+}
+
+#insights-hero .service-hero-title {
+  max-width: none;
 }
 
 .insights-section.alt {
@@ -4278,7 +4282,7 @@ button.topic-card {
 
 /* From the transaction desk (dark, signature band) */
 .transaction-desk {
-  padding: 70px 0;
+  padding: 44px 0;
   background-color: var(--bg-dark);
 }
 
