@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototype D — Executive / Boutique Advisory | EquiFin Advisory</title>
+<meta name="description" content="Homepage design prototype — internal review only.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="icon" type="image/svg+xml" href="images/equifin-favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --bg-dark:#0A0A0A;
+  --text:#111111; --text-2:#5c5c5c; --text-3:#9a9a9a;
+  --on-dark:#F2F2F0; --on-dark-2:#a3a3a0;
+  --accent:#5C1F24;
+  --border:#E4E2DE;
+  --serif:'EB Garamond',Georgia,serif; --sans:'Lato',-apple-system,sans-serif;
+  --container:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);line-height:1.7;font-size:18px}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.15;font-weight:400;text-wrap:balance}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:var(--container);margin:0 auto;padding:0 40px}
+.label{font-family:var(--sans);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--text-3)}
+.proto-ribbon{background:var(--bg-dark);color:#c9a3a3;text-align:center;font-family:var(--sans);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;padding:8px 12px;font-weight:700}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--text);font-family:var(--sans);font-weight:700;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:0 0 6px;border:none;border-bottom:1px solid var(--text)}
+.btn-primary:hover{color:var(--accent);border-color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.nav{border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:30px 40px;max-width:var(--container);margin:0 auto}
+.nav-logo img{height:30px;width:auto}
+.nav-links{display:flex;gap:40px;list-style:none;margin:0;padding:0;font-family:var(--sans)}
+.nav-links a{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2)}
+.nav-links a:hover{color:var(--accent)}
+.nav-toggle{display:none;background:none;border:none;color:var(--text);cursor:pointer;font-size:1.2rem}
+@media(max-width:820px){.nav-links{display:none}.nav-toggle{display:block}}
+
+.hero{padding:130px 0 110px;text-align:center}
+.hero .label{display:block;margin-bottom:28px}
+.hero h1{font-size:clamp(2.4rem,5vw,3.8rem);font-style:italic;max-width:840px;margin:0 auto}
+.hero .lede{margin:32px auto 0;font-size:1.15rem;color:var(--text-2);max-width:56ch}
+.hero-actions{margin-top:44px}
+.hero-note{margin-top:34px;font-family:var(--sans);font-size:.74rem;color:var(--text-3);letter-spacing:.02em}
+
+.trust{border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.trust-grid>*{min-width:0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:56px 30px;text-align:center;border-right:1px solid var(--border);overflow-wrap:break-word}
+.trust-item:last-child{border-right:none}
+.trust-num{font-size:2.1rem;font-style:italic}
+.trust-label{margin-top:10px;font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);font-weight:700}
+@media(max-width:820px){.trust-grid{grid-template-columns:repeat(2,1fr)}.trust-item{border-bottom:1px solid var(--border)}.trust-item:nth-child(2n){border-right:none}}
+
+section.block{padding:130px 0}
+.block-head{text-align:center;max-width:640px;margin:0 auto 90px}
+.block-head .label{display:block;margin-bottom:22px}
+.block-head h2{font-size:clamp(1.8rem,3vw,2.5rem);font-style:italic}
+
+/* SOLUTIONS — pure index list, no cards */
+.index-list{max-width:820px;margin:0 auto}
+.index-row{display:grid;grid-template-columns:70px 1fr;gap:30px;padding:34px 0;border-top:1px solid var(--border)}
+.index-list .index-row:last-child{border-bottom:1px solid var(--border)}
+.index-row .roman{font-style:italic;font-size:1.3rem;color:var(--accent)}
+.index-row h3{font-size:1.35rem}
+.index-row p{margin-top:10px;font-family:var(--sans);color:var(--text-2);font-size:.92rem;line-height:1.7}
+@media(max-width:600px){.index-row{grid-template-columns:1fr;gap:10px}}
+
+/* PROCESS — centered numbered sequence */
+.process-seq{display:flex;justify-content:center;gap:0;max-width:900px;margin:0 auto;flex-wrap:wrap}
+.process-step{flex:1;min-width:180px;text-align:center;padding:0 26px;position:relative}
+.process-step:not(:last-child)::after{content:"";position:absolute;top:11px;right:0;width:26px;height:1px;background:var(--border)}
+.process-step .roman{display:block;font-style:italic;font-size:1.4rem;color:var(--accent);margin-bottom:18px}
+.process-step h3{font-size:1.1rem}
+.process-step p{margin-top:10px;font-family:var(--sans);color:var(--text-2);font-size:.84rem;line-height:1.7}
+@media(max-width:700px){.process-seq{flex-direction:column;gap:44px}.process-step::after{display:none}}
+
+/* WHY — plain typographic list, centered */
+.why-list{max-width:620px;margin:0 auto;text-align:center}
+.why-item{padding:30px 0;border-top:1px solid var(--border)}
+.why-list .why-item:last-child{border-bottom:1px solid var(--border)}
+.why-item h3{font-size:1.2rem;font-style:italic}
+.why-item p{margin-top:10px;font-family:var(--sans);color:var(--text-2);font-size:.88rem}
+
+.cta-band{background:var(--bg-dark);color:var(--on-dark);padding:130px 0;text-align:center}
+.cta-band .label{color:#c9a3a3;display:block;margin-bottom:26px}
+.cta-band h2{font-size:clamp(2rem,3.6vw,2.9rem);font-style:italic;color:#fff}
+.cta-band p{margin-top:20px;color:var(--on-dark-2);font-size:1.05rem}
+.cta-band .btn-primary{color:#fff;border-color:#fff;margin-top:40px}
+.cta-band .btn-primary:hover{color:#e3b3b3;border-color:#e3b3b3}
+
+footer{padding:70px 0 36px}
+.footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:44px;border-bottom:1px solid var(--border)}
+.footer-brand img{height:28px;margin-bottom:16px}
+.footer-brand p{font-family:var(--sans);font-size:.82rem;max-width:36ch;color:var(--text-3)}
+.footer-col .label{display:block;margin-bottom:16px}
+.footer-col a,.footer-col p{display:block;font-family:var(--sans);font-size:.85rem;margin-bottom:10px;color:var(--text-2)}
+.footer-bottom{margin-top:36px;font-family:var(--sans);font-size:.72rem;color:var(--text-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+<div class="proto-ribbon">Prototype D — Executive / Boutique Advisory · Internal Design Review Only · Not Indexed</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><img src="images/equifin-logo.svg" alt="EquiFin Advisory"></a>
+    <ul class="nav-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/sectors">Sectors</a></li>
+      <li><a href="/insights">Insights</a></li>
+      <li><a href="/contact-us">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="label">Corporate &amp; Real Estate Debt Advisory</span>
+    <h1>A capital transaction, carried the way a mandate deserves to be.</h1>
+    <p class="lede">EquiFin advises developers, promoters and CFOs on land acquisition, construction, TDR/FSI, approval-stage and structured project finance — positioned quietly, negotiated directly, and carried through to disbursement.</p>
+    <div class="hero-actions"><a href="/contact-us" class="btn-primary">Discuss Your Requirement</a></div>
+    <p class="hero-note">Independent advisory — EquiFin does not act as a lender and does not extend credit or accept deposits.</p>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item"><div class="trust-num">₹700+ Cr</div><div class="trust-label">Syndicated Annually</div></div>
+      <div class="trust-item"><div class="trust-num">60+</div><div class="trust-label">Lending Relationships</div></div>
+      <div class="trust-item"><div class="trust-num">15–60 Days</div><div class="trust-label">To Sanction</div></div>
+      <div class="trust-item"><div class="trust-num">Independent</div><div class="trust-label">Not a Lender</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="block-head">
+      <span class="label">Financing Solutions</span>
+      <h2>Six mandates, one discipline.</h2>
+    </div>
+    <div class="index-list">
+      <div class="index-row"><span class="roman">I.</span><div><h3>Land Acquisition Funding</h3><p>Structured against the underlying asset for developers acquiring land ahead of launch.</p></div></div>
+      <div class="index-row"><span class="roman">II.</span><div><h3>Construction Finance</h3><p>Milestone-linked project debt aligned to a development's actual build schedule.</p></div></div>
+      <div class="index-row"><span class="roman">III.</span><div><h3>TDR &amp; FSI Funding</h3><p>Capital against Transferable Development Rights and premium FSI requirements.</p></div></div>
+      <div class="index-row"><span class="roman">IV.</span><div><h3>Approval-Stage Funding</h3><p>Bridge capital structured for projects awaiting regulatory approvals.</p></div></div>
+      <div class="index-row"><span class="roman">V.</span><div><h3>Structured &amp; Project Finance</h3><p>Long-tenor infrastructure and capex debt structured around project cash flows.</p></div></div>
+      <div class="index-row"><span class="roman">VI.</span><div><h3>Lender Arrangement</h3><p>Multi-lender consortium structuring and institutional positioning through to sanction.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="background:#FAFAF8">
+  <div class="container">
+    <div class="block-head">
+      <span class="label">Our Process</span>
+      <h2>From requirement to disbursement.</h2>
+    </div>
+    <div class="process-seq">
+      <div class="process-step"><span class="roman">I</span><h3>Understand</h3><p>The business situation behind the requirement.</p></div>
+      <div class="process-step"><span class="roman">II</span><h3>Structure</h3><p>Sizing, tenor, security and capital stack.</p></div>
+      <div class="process-step"><span class="roman">III</span><h3>Arrange</h3><p>Institutional mapping and engagement.</p></div>
+      <div class="process-step"><span class="roman">IV</span><h3>Disburse</h3><p>Documentation through to final drawdown.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="block-head">
+      <span class="label">Why EquiFin</span>
+      <h2>Quiet counsel, carried through.</h2>
+    </div>
+    <div class="why-list">
+      <div class="why-item"><h3>Independent Advisory</h3><p>We structure and negotiate — we do not lend ourselves.</p></div>
+      <div class="why-item"><h3>60+ Lender Relationships</h3><p>Across PSU banks, private banks, NBFCs and private credit funds.</p></div>
+      <div class="why-item"><h3>One Point of Contact</h3><p>A single team, from structuring through to disbursement.</p></div>
+      <div class="why-item"><h3>No Guaranteed Outcomes, No False Comfort</h3><p>We say so plainly, before the relationship begins.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <span class="label">Begin the Conversation</span>
+    <h2>Bring us the transaction as it stands.</h2>
+    <p>We will tell you, honestly, what it will take to carry it through.</p>
+    <a href="/contact-us" class="btn-primary">Discuss Your Requirement</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/equifin-logo.svg" alt="EquiFin Advisory">
+        <p>Institutional debt and capital advisory for growth-stage and established businesses.</p>
+      </div>
+      <div class="footer-col">
+        <span class="label">Company</span>
+        <a href="/about-us">About Us</a>
+        <a href="/team">Team</a>
+        <a href="/our-approach">Our Approach</a>
+        <a href="/insights">Insights</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">Get in Touch</span>
+        <p>617, 6th Floor, Precious Mall, Moti Dungri Road, Jaipur, Rajasthan 302004</p>
+        <a href="tel:+919175993255">+91 91759 93255</a>
+        <a href="mailto:info@equifinadvisory.com">info@equifinadvisory.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EquiFin Advisory Private Limited. EquiFin does not act as a lender and does not extend credit or accept deposits.</p>
+      <p>Design Prototype D — Not part of the live site</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function(){
+  var links = document.querySelector('.nav-links');
+  var open = links.style.display === 'flex';
+  links.style.display = open ? 'none' : 'flex';
+  links.style.cssText += open ? '' : 'position:absolute;top:82px;left:0;right:0;background:#fff;flex-direction:column;padding:24px 40px;gap:22px;border-bottom:1px solid #E4E2DE;text-align:left;';
+});
+</script>
+</body>
+</html>

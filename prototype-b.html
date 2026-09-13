@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototype B — Premium Real-Estate Finance | EquiFin Advisory</title>
+<meta name="description" content="Homepage design prototype — internal review only.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="icon" type="image/svg+xml" href="images/equifin-favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F5; --bg-dark:#1C1917; --card:#ffffff;
+  --text:#241F1B; --text-2:#6b6259; --text-3:#948a7f;
+  --on-dark:#F5F1EA; --on-dark-2:#c9beae; --on-dark-3:#8f8377;
+  --accent:#A8562F; --accent-hover:#C46B3E; --accent-dim:rgba(168,86,47,.09);
+  --border:#E3DCD3; --border-dark:rgba(245,241,234,.14);
+  --serif:'Cormorant',Georgia,serif; --sans:'Montserrat',-apple-system,sans-serif;
+  --container:1220px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;font-size:16px;font-weight:400}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.1;font-weight:500;text-wrap:balance}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:var(--container);margin:0 auto;padding:0 40px}
+.proto-ribbon{background:var(--bg-dark);color:var(--accent-hover);text-align:center;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;font-weight:600;font-family:var(--sans)}
+.eyebrow{display:block;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:20px;font-family:var(--sans)}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;font-weight:600;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;padding:16px 30px;border:1px solid var(--accent);transition:background .15s}
+.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--text);font-weight:600;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;padding:16px 30px;border:1px solid var(--text)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.nav{background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:22px 40px;max-width:var(--container);margin:0 auto}
+.nav-logo img{height:32px;width:auto}
+.nav-links{display:flex;gap:38px;list-style:none;margin:0;padding:0}
+.nav-links a{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text)}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{display:flex;align-items:center;gap:20px}
+.nav-toggle{display:none;background:none;border:none;color:var(--text);cursor:pointer;font-size:1.3rem}
+.nav-mobile-cta{display:none}
+@media(max-width:900px){.nav-links{display:none}.nav-toggle{display:block}.nav-cta>.btn-primary{display:none}.nav-mobile-cta{display:block;margin-top:8px}}
+
+/* HERO with skyline motif */
+.hero{background:var(--bg-dark);color:var(--on-dark);padding:110px 0 0;position:relative}
+.hero-inner{max-width:760px;padding-bottom:70px}
+.hero h1{font-size:clamp(2.5rem,4.6vw,4rem);color:#fff;font-weight:500}
+.hero .lede{margin-top:26px;font-size:1.15rem;color:var(--on-dark-2);max-width:56ch;font-weight:300}
+.hero-actions{margin-top:38px;display:flex;gap:18px;flex-wrap:wrap}
+.hero-actions .btn-secondary{color:var(--on-dark);border-color:var(--border-dark)}
+.skyline{width:100%;height:auto;display:block}
+.hero-note{margin-top:30px;font-size:.78rem;color:var(--on-dark-3);letter-spacing:.03em}
+
+/* TRUST */
+.trust{background:var(--card)}
+.trust-grid>*,.solutions-grid>*,.why-grid>*{min-width:0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:52px 34px;border-right:1px solid var(--border);overflow-wrap:break-word}
+.trust-item:last-child{border-right:none}
+.trust-num{font-family:var(--serif);font-size:2.6rem;font-weight:600;color:var(--bg-dark)}
+.trust-label{margin-top:8px;font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-2);font-weight:600}
+@media(max-width:900px){.trust-grid{grid-template-columns:repeat(2,1fr)}.trust-item{border-bottom:1px solid var(--border)}.trust-item:nth-child(2n){border-right:none}}
+
+section.block{padding:120px 0}
+.block-head{max-width:600px;margin-bottom:64px}
+.block-head h2{font-size:clamp(1.9rem,3vw,2.6rem)}
+.block-head p{margin-top:18px;color:var(--text-2);font-size:1.02rem;font-weight:300}
+
+/* SOLUTIONS — architectural cards, sharp edges */
+.solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.sol-card{background:var(--card);padding:44px 36px}
+.sol-num{font-family:var(--serif);color:var(--accent);font-size:1.6rem;font-weight:600}
+.sol-card h3{font-size:1.3rem;margin-top:16px;font-weight:500}
+.sol-card p{margin-top:12px;color:var(--text-2);font-size:.92rem;font-weight:300}
+@media(max-width:900px){.solutions-grid{grid-template-columns:1fr}}
+
+/* CAPITAL STACK diagram */
+.stack-section{background:var(--bg-dark);color:var(--on-dark)}
+.stack-section .block-head p{color:var(--on-dark-2)}
+.stack-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.stack-bars{display:flex;flex-direction:column;gap:2px;max-width:420px}
+.stack-bar{padding:20px 24px;font-size:.85rem;font-weight:600;letter-spacing:.03em;display:flex;justify-content:space-between}
+@media(max-width:900px){.stack-wrap{grid-template-columns:1fr}}
+
+/* PROCESS numbered index style */
+.process-list{display:flex;flex-direction:column}
+.process-row{display:grid;grid-template-columns:90px 1fr 2fr;gap:30px;padding:30px 0;border-top:1px solid var(--border);align-items:baseline}
+.process-row:last-child{border-bottom:1px solid var(--border)}
+.process-row .idx{font-family:var(--serif);font-size:1.4rem;color:var(--accent)}
+.process-row h3{font-size:1.15rem;font-weight:500}
+.process-row p{color:var(--text-2);font-size:.92rem;font-weight:300}
+@media(max-width:700px){.process-row{grid-template-columns:1fr;gap:8px}}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:44px 60px}
+.why-item{border-left:2px solid var(--accent);padding-left:24px}
+.why-item h3{font-size:1.15rem;font-weight:500;margin-bottom:8px}
+.why-item p{color:var(--text-2);font-size:.92rem;font-weight:300}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+
+.cta-band{background:var(--accent-dim);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:90px 0;text-align:center}
+.cta-band h2{font-size:clamp(1.7rem,2.8vw,2.4rem)}
+.cta-band p{margin-top:16px;color:var(--text-2);font-weight:300}
+.cta-band .hero-actions{justify-content:center;margin-top:32px}
+
+footer{background:var(--bg-dark);color:var(--on-dark-2);padding:70px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px}
+.footer-brand img{height:30px;margin-bottom:16px}
+.footer-brand p{font-size:.86rem;max-width:36ch;color:var(--on-dark-3);font-weight:300}
+.footer-col h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-hover);margin-bottom:16px;font-weight:600}
+.footer-col a,.footer-col p{display:block;font-size:.86rem;margin-bottom:10px;color:var(--on-dark-2);font-weight:300}
+.footer-bottom{margin-top:54px;padding-top:24px;border-top:1px solid var(--border-dark);font-size:.76rem;color:var(--on-dark-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-weight:300}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr;gap:36px}}
+</style>
+</head>
+<body>
+<div class="proto-ribbon">Prototype B — Premium Real-Estate Finance · Internal Design Review Only · Not Indexed</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><img src="images/equifin-logo.svg" alt="EquiFin Advisory"></a>
+    <ul class="nav-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/sectors">Sectors</a></li>
+      <li><a href="/insights">Insights</a></li>
+      <li><a href="/contact-us">Contact</a></li>
+      <li class="nav-mobile-cta"><a href="/contact-us" class="btn-primary">Discuss Your Requirement</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="/contact-us" class="btn-primary">Discuss Your Requirement</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Real Estate &amp; Development Finance</span>
+    <h1>Capital, structured to the shape of the ground beneath it.</h1>
+    <p class="lede">From land acquisition through TDR, approvals and construction, EquiFin structures and arranges debt for developers and promoters — built around the real cash-flow rhythm of a development, not a generic lending template.</p>
+    <div class="hero-actions">
+      <a href="/contact-us" class="btn-primary">Discuss Your Requirement</a>
+      <a href="/services" class="btn-secondary">View Financing Solutions</a>
+    </div>
+    <p class="hero-note">Independent advisory — EquiFin does not act as a lender and does not extend credit or accept deposits.</p>
+  </div>
+  <svg class="skyline" viewBox="0 0 1220 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrative skyline line drawing">
+    <g fill="none" stroke="#8f8377" stroke-width="1" opacity=".55">
+      <rect x="40" y="60" width="70" height="80"/>
+      <rect x="130" y="30" width="50" height="110"/>
+      <rect x="200" y="75" width="90" height="65"/>
+      <rect x="310" y="15" width="46" height="125"/>
+      <rect x="376" y="55" width="60" height="85"/>
+      <rect x="460" y="40" width="40" height="100"/>
+      <rect x="520" y="70" width="100" height="70"/>
+      <rect x="640" y="20" width="52" height="120"/>
+      <rect x="712" y="58" width="66" height="82"/>
+      <rect x="800" y="35" width="44" height="105"/>
+      <rect x="864" y="72" width="94" height="68"/>
+      <rect x="980" y="50" width="56" height="90"/>
+      <rect x="1056" y="25" width="40" height="115"/>
+      <rect x="1116" y="65" width="70" height="75"/>
+      <line x1="0" y1="140" x2="1220" y2="140" stroke="#A8562F" stroke-width="1.5"/>
+    </g>
+  </svg>
+</section>
+
+<section class="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item"><div class="trust-num">₹700+ Cr</div><div class="trust-label">Debt Capital Syndicated Annually</div></div>
+      <div class="trust-item"><div class="trust-num">60+</div><div class="trust-label">Institutional Lending Relationships</div></div>
+      <div class="trust-item"><div class="trust-num">15–60 Days</div><div class="trust-label">Average Turnaround to Sanction</div></div>
+      <div class="trust-item"><div class="trust-num">Independent</div><div class="trust-label">Advisory — Not a Lender</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="block-head">
+      <span class="eyebrow">Financing Solutions</span>
+      <h2>Six ways capital meets a development.</h2>
+      <p>Each stage of a project needs a different kind of debt — and a different conversation with the lender.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="sol-card"><span class="sol-num">01</span><h3>Land Acquisition</h3><p>Funding structured against the underlying land parcel ahead of launch.</p></div>
+      <div class="sol-card"><span class="sol-num">02</span><h3>Construction Finance</h3><p>Milestone-linked project debt aligned to the build schedule.</p></div>
+      <div class="sol-card"><span class="sol-num">03</span><h3>TDR &amp; FSI</h3><p>Capital against Transferable Development Rights and premium FSI purchase.</p></div>
+      <div class="sol-card"><span class="sol-num">04</span><h3>Approval-Stage Funding</h3><p>Bridge capital for projects awaiting regulatory and statutory approvals.</p></div>
+      <div class="sol-card"><span class="sol-num">05</span><h3>Structured &amp; Project Finance</h3><p>Long-tenor infrastructure and capex debt built around project cash flows.</p></div>
+      <div class="sol-card"><span class="sol-num">06</span><h3>Lender Arrangement</h3><p>Multi-lender consortium structuring and institutional positioning.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block stack-section">
+  <div class="container">
+    <div class="stack-wrap">
+      <div>
+        <span class="eyebrow">Where Capital Sits</span>
+        <h2>Every layer of the stack carries a different cost and claim.</h2>
+        <p style="margin-top:18px;color:var(--on-dark-2);font-weight:300">Senior secured debt, structured/mezzanine capital and promoter equity each price risk differently — the right transaction uses the layer that actually fits the requirement, not the one that's easiest to arrange.</p>
+      </div>
+      <div class="stack-bars">
+        <div class="stack-bar" style="background:#c9beae;color:#1C1917"><span>Promoter Equity</span><span>Highest Cost</span></div>
+        <div class="stack-bar" style="background:var(--accent);color:#fff"><span>Structured / Mezzanine Debt</span><span>Mid-Layer</span></div>
+        <div class="stack-bar" style="background:#F5F1EA;color:#1C1917"><span>Senior Secured Debt</span><span>Lowest Cost</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="block-head">
+      <span class="eyebrow">Our Process</span>
+      <h2>From requirement to disbursement.</h2>
+    </div>
+    <div class="process-list">
+      <div class="process-row"><span class="idx">01</span><h3>Understand</h3><p>Business model, cash-flow profile, existing obligations and transaction timing — before any financing option is evaluated.</p></div>
+      <div class="process-row"><span class="idx">02</span><h3>Structure</h3><p>Capital sizing, tenor, repayment, security and capital stack aligned to the purpose of capital, not simply maximised for quantum.</p></div>
+      <div class="process-row"><span class="idx">03</span><h3>Arrange</h3><p>Institutional mapping and direct engagement across relevant banks, NBFCs and capital providers.</p></div>
+      <div class="process-row"><span class="idx">04</span><h3>Disburse</h3><p>Documentation, security creation, compliance fulfilment and final drawdown.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="block-head">
+      <span class="eyebrow">Why EquiFin</span>
+      <h2>Built for developers who've done this before.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><h3>Independent Advisory</h3><p>We structure and negotiate — we do not lend ourselves, so the transaction is designed around the project, not our balance sheet.</p></div>
+      <div class="why-item"><h3>60+ Lender Relationships</h3><p>Direct engagement across PSU banks, private banks, NBFCs and private credit funds.</p></div>
+      <div class="why-item"><h3>One Point of Contact</h3><p>A single team carries the mandate from structuring through to disbursement.</p></div>
+      <div class="why-item"><h3>No Guaranteed Outcomes, No False Comfort</h3><p>Capital transactions involve real commercial and institutional considerations — we say so plainly, before the relationship, not after.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to structure your next development?</h2>
+    <p>Tell us where the project stands — we'll tell you honestly what it will take to fund it.</p>
+    <div class="hero-actions"><a href="/contact-us" class="btn-primary">Discuss Your Requirement</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/equifin-logo-reversed.svg" alt="EquiFin Advisory">
+        <p>Institutional debt and capital advisory for growth-stage and established businesses — structured around lender realities and transaction complexity.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about-us">About Us</a>
+        <a href="/team">Team</a>
+        <a href="/our-approach">Our Approach</a>
+        <a href="/insights">Insights</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <p>617, 6th Floor, Precious Mall, Moti Dungri Road, Jaipur, Rajasthan 302004</p>
+        <a href="tel:+919175993255">+91 91759 93255</a>
+        <a href="mailto:info@equifinadvisory.com">info@equifinadvisory.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EquiFin Advisory Private Limited. EquiFin does not act as a lender and does not extend credit or accept deposits.</p>
+      <p>Design Prototype B — Not part of the live site</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function(){
+  var links = document.querySelector('.nav-links');
+  var open = links.style.display === 'flex';
+  links.style.display = open ? 'none' : 'flex';
+  links.style.cssText += open ? '' : 'position:absolute;top:76px;left:0;right:0;background:#FAF8F5;flex-direction:column;padding:24px 40px;gap:20px;border-bottom:1px solid #E3DCD3;';
+});
+</script>
+</body>
+</html>
